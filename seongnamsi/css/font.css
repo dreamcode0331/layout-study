@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* 에스코어드림 */
+@font-face {
+  font-family: 'SCDream';
+  src: url('../font/SCDream4.otf') format('woff'),
+    url('../font/SCDream4.woff') format('woff'),
+    url('../font/SCDream4.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('../font/SCDream5.otf') format('woff'),
+    url('../font/SCDream5.woff') format('woff'),
+    url('../font/SCDream5.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SCDream';
+  src: url('../font/SCDream6.otf') format('woff'),
+    url('../font/SCDream6.woff') format('woff'),
+    url('../font/SCDream6.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}

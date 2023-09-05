@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* HEADER */
+.header{position:relative;min-width:1400px}
+.header a{display:inline-block}
+.header .header_inner{border-bottom:1px solid #ececec;background:#fff}
+.header .header_config{display:flex;justify-content:space-between;position:relative;margin:0 auto;padding-right:180px;max-width:1400px;box-sizing:border-box}
+.header .link_site_list{display:flex}
+.header .link_site_item{border-right:1px solid #ececec}
+.header .link_site_item:first-child{border-left:1px solid #ececec}
+.header .link_site{padding:13px 20px;font-size:16px;color:#333;line-height:19px}
+.header .user_setting{margin-right:30px;font-size:0}
+.header .user_setting a{margin-left:18px;padding:13px 0;font-size:14px;color:#555;line-height:19px}
+.header .user_setting a:first-child{margin-left:0}
+.header .user_setting a:before{display:inline-block;margin-right:7px;background-repeat:no-repeat;background-position:center;vertical-align:top;content:""}
+.header .user_setting .login:before{width:14px;height:19px;;background-image:url(../img/ico_siteLogin.png);background-size:14px 19px}
+.header .user_setting .join:before{width:13px;height:18px;;background-image:url(../img/ico_siteJoin.png);background-size:13px 18px}
+.header .user_setting .langs:before{width:17px;height:17px;;background-image:url(../img/ico_siteLangs.png);background-size:17px 17px}
+.header .family_site{position:absolute;top:0;right:0;width:150px;height:44px;border-radius:0 0 10px 10px;background:#636676;font-size:17px;color:#fff}
+.header .family_site:before{display:inline-block;margin-right:9px;width:15px;height:15px;background-image:url(../img/ico_onceView.png);background-repeat:no-repeat;background-position:center;background-size:15px 15px;content:""}
+.header .logo{padding:18px 0 19px;font-size:0}
+.header .logo .logo_link{line-height:47px}
+.header .logo .logo_link:before{display:inline-block;margin:0 20px;width:2px;height:16px;background:#d9d9d9;vertical-align:middle;content:""}
+.header .logo .logo_link:first-child:before{display:none}
+.header .header_inner + .header_inner{position:relative;border-bottom:1px solid #e6e8eb}
+.header .header_inner + .header_inner .header_config{display:flex;justify-content:space-between;position:relative;z-index:100;margin:0 auto;padding-top:10px;padding-right:108px;max-width:1400px;box-sizing:border-box}
+.header_gnb_area_bg{position:absolute;left:0;top:96px;right:0;bottom:0;background-color: gold;}
+
+.header .gnb > ul > li{display:inline-block}
+.header .gnb > ul > li > a{position:relative;z-index:1;padding:30px 29px;font-size:21px;color:#222;font-weight:500;line-height:25px}
+.header .gnb > ul > li > a:before{display:none;position:absolute;left:50%;bottom:26px;z-index:-1;transform:translateX(-50%);width:calc(100% - 48px);height:10px;background:#ffeaeb;content:""}
+.header .gnb > ul > li > a:after{display:none;position:absolute;left:50%;bottom:-7px;z-index:101;transform:translateX(-50%);width:13px;height:13px;border:3px solid #d84048;border-radius:100%;background:#fff;box-sizing:border-box;content:""}
+.header .gnb > ul > li > a:hover,.header .gnb > ul > li > a:focus{color:#d84048}
+.header .gnb > ul > li > a:hover:before,.header .gnb > ul > li > a:hover:after,.header .gnb > ul > li > a:focus:before,.header .gnb > ul > li > a:focus:after{display:block}
+
+.header .gnb > ul > li > ul{display:none;flex-wrap:wrap;position:absolute;left:0;top:96px;width:calc(100% + 30px);margin-left:-30px;padding:30px 0;background:#fff}
+.header .gnb > ul > li > a:hover + .menu_list{display:flex}
+.header .gnb > ul > li > ul > li{display:flex;flex-direction:column;width:calc(20% - 30px);margin-left:30px;margin-bottom:5px}
+.header .gnb > ul > li > ul > li > a{position:relative;padding:7px 15px;width:100%;border:1px solid #c5c9d6;border-radius:5px;font-size:16px;font-weight:500;color:#555;line-height:25px;box-sizing:border-box;transition:all .3s}
+.header .gnb > ul > li > ul > li > a.ico:after{position:absolute;top:12px;right:13px;width:10px;height:16px;background-image:url(../img/arr_gnb_gray.png);background-repeat:no-repeat;background-position:center;background-size:6px 10px;transform:rotate(90deg);content:""}
+.header .gnb > ul > li > ul > li > a[target="_blank"]:after{display:inline-block;margin-left:6px;width:13px;height:13px;background-image:url(../img/ico_blank.png);background-repeat:no-repeat;background-position:center;background-size:13px 13px;content:""}
+.header .gnb > ul > li > ul > li > a:hover,.header .gnb > ul > li > ul > li > a:focus,.header .gnb > ul > li > ul > li > a.is_selected{background-color:#d84048;border:1px solid #d84048;color:#fff}
+.header .gnb > ul > li > ul > li > a.ico:hover:after,.header .gnb > ul > li > ul > li > a.ico:focus:after,.header .gnb > ul > li > ul > li > a.ico.is_selected:after{background-image:url(../img/arr_gnb_white.png)}
+.header .gnb > ul > li > ul > li > a[target="_blank"]:hover:after,.header .gnb > ul > li > ul > li > a[target="_blank"]:focus:after,.header .gnb > ul > li > ul > li > a[target="_blank"].is_selected:after{background-image:url(../img/ico_blank_white.png)}
+.header .gnb > ul > li > ul > li > a + ul{margin-top:8px;margin-bottom:15px}
+.header .gnb > ul > li > ul > li > a + ul a{display:block;position:relative;width:100%;padding:0 15px 0 26px;color:#555;line-height:25px;box-sizing:border-box}
+.header .gnb > ul > li > ul > li > a + ul a:hover,.header .gnb > ul > li > ul > li > a + ul a:focus {color:#d84048;text-decoration:underline}
+.header .gnb > ul > li > ul > li > a + ul a:before{position:absolute;left:17px;top:10px;width:3px;height:3px;border-radius:100%;background-color:#999;content:""}
+
+.header .btn_box{position:absolute;right:0;bottom:0;font-size:0}
+.header .btn_box .btn_search{padding:29px 7px 30px}
+.header .btn_box .link_sitemap{padding:32px 7px 33px 8px}
+.header .btn_box .btn_search,.header .btn_box .link_sitemap{vertical-align:middle}
+.header .btn_box .btn_search:before,.header .btn_box .link_sitemap:before{display:inline-block;background-repeat:no-repeat;background-position:center;vertical-align:top;content:""}
+.header .btn_box .btn_search:before{width:26px;height:26px;background-image:url(../img/ico_btnTopSearch.png);background-size:26px 26px}
+.header .btn_box .link_sitemap:before{width:25px;height:20px;background-image:url(../img/ico_btnTopTotal.png);background-size:25px 20px}
