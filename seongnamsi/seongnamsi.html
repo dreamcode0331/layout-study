@@ -155,52 +155,73 @@
 
     <main class="container">
       <section class="section">
-        <h2 class="blind">대기정보/통합검색/코로나19/메인배너/열린시장실</h2>
-        <a href="#" class="weather">
-          <span class="ico"><img src="img/ico_weather_sunny.png" alt="맑음"></span>
-          <span class="temperature">30℃</span>
-          <span class="dust">초미세먼지</span>
-          <span class="dust_state">좋음</span>
-        </a>
-        <div class="search_group">
-          <div class="search_area">
-            <div class="select_box">
-              <select name="collection" id="collection" title="검색방식선택">
-                <option value="all" selected>통합검색</option>
-                <option value="site">관련사이트</option>
-                <option value="directory">디렉토리</option>
-                <option value="board">게시판</option>
-                <option value="contents">웹페이지</option>
-                <option value="mulimedia">멀티미디어</option>
-                <option value="staff">직원/업무</option>
-              </select>
+        <div class="inner">
+          <h2 class="blind">대기정보/통합검색/코로나19/메인배너/열린시장실</h2>
+          <a href="#" class="weather">
+            <span class="ico"><img src="img/ico_weather_sunny.png" alt="맑음"></span>
+            <span class="temperature">30℃</span>
+            <span class="dust">초미세먼지</span>
+            <span class="dust_state">좋음</span>
+          </a>
+          <div class="search_group">
+            <div class="search_area">
+              <div class="select_box">
+                <select name="collection" id="collection" title="검색방식선택">
+                  <option value="all" selected>통합검색</option>
+                  <option value="site">관련사이트</option>
+                  <option value="directory">디렉토리</option>
+                  <option value="board">게시판</option>
+                  <option value="contents">웹페이지</option>
+                  <option value="mulimedia">멀티미디어</option>
+                  <option value="staff">직원/업무</option>
+                </select>
+              </div>
+              <div class="inp_box">
+                <label for="inp_search" class="blind">검색어 입력</label>
+                <input type="text" name="inp_search" id="inp_search" class="inp" placeholder="검색어를 입력하세요.">
+              </div>
+              <button type="button" class="btn_search"><span class="blind">검색</span></button>
             </div>
-            <div class="inp_box">
-              <label for="inp_search" class="blind">검색어 입력</label>
-              <input type="text" name="inp_search" id="inp_search" class="inp" placeholder="검색어를 입력하세요.">
+            <div class="keyword_area">
+              <span class="keyword_tit">인기 검색어</span>
+              <div class="slide">
+                <div class="slide_box" id="slideBox">
+                  <ul class="slide_list" id="slideList" onmouseover="result=false" onmouseout="result=true">
+                    <li class="slide_item"><a href="#" class="slide_link">채용공고</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">금곡공원 국민체육센터</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">성남문화재여행예약</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">마루공원 예약</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">구인구직</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">보건증예약</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">심폐소생술</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">조직도</a></li>
+                    <li class="slide_item"><a href="#" class="slide_link">보건증</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slide_btn_box">
+                <button type="button" class="slide_btn btn_prev" onclick="speed=-1"></button>
+                <button type="button" class="slide_btn btn_next" onclick="speed=1"></button>
+              </div>
             </div>
-            <button type="button" class="btn_search"><span class="blind">검색</span></button>
           </div>
-          <div class="keyword_area">
-            <span class="keyword_tit">인기 검색어</span>
-            <div class="slide">
-              <div class="slide_box" id="slideBox">
-                <ul class="slide_list" id="slideList" onmouseover="result=false" onmouseout="result=true">
-                  <li class="slide_item"><a href="#" class="slide_link">채용공고</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">금곡공원 국민체육센터</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">성남문화재여행예약</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">마루공원 예약</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">구인구직</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">보건증예약</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">심폐소생술</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">조직도</a></li>
-                  <li class="slide_item"><a href="#" class="slide_link">보건증</a></li>
-                </ul>
+          <a href="#" class="covid_status">코로나19 확진자 현황</a>
+        </div>
+        <div class="inner">
+          <div class="banner_area">
+            <div class="swiper banner_slide">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/img_popupzone1.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/img_popupzone2.png" alt=""></div>
+                <div class="swiper-slide"><img src="img/img_popupzone3.png" alt=""></div>
               </div>
             </div>
             <div class="slide_btn_box">
-              <button type="button" class="slide_btn btn_prev" onclick="speed=-1"></button>
-              <button type="button" class="slide_btn btn_next" onclick="speed=1"></button>
+              <button type="button" class="swiper-button-prev banner_slide_btn prev"></button>
+              <button type="button" class="swiper-button-pause banner_slide_btn pause"><span class="blind">stop</span></button>
+              <button type="button" class="swiper-button-play banner_slide_btn play"><span class="blind">play</span></button>
+              <button type="button" class="swiper-button-next banner_slide_btn next"></button>
+              <button type="button" class="swiper-pagination"></button>
             </div>
           </div>
         </div>
@@ -209,7 +230,7 @@
     
   </div>
   <script src="js/script.js"></script>
-  <!-- <script>
+  <script>
     $(function(){
       var dimmed = $('.dimmed');
       var menuLinkDepth1 = $('.header .gnb > .menu_list > .menu_item > .menu_link');
@@ -237,6 +258,6 @@
         menuLinkDepth1.removeClass('is_show');
       });
     });
-  </script> -->
+  </script>
 </body>
 </html>

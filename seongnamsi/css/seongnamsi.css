@@ -70,9 +70,14 @@
 .header .btn_box .btn_search:before{width:26px;height:26px;background-image:url(../img/ico_btnTopSearch.png);background-size:26px 26px}
 .header .btn_box .link_sitemap:before{width:25px;height:20px;background-image:url(../img/ico_btnTopTotal.png);background-size:25px 20px}
 
+/* SELECT, INPUT */
+select{padding:0 25px 0 10px;width:100%;height:50px;background-image:url(../img/main_select_ico.png);background-repeat:no-repeat;background-position:right 10px center;background-size:10px 6px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
+input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
+
 /* SECTION 1 */
-.section{display:flex;justify-content:space-between;margin:0 auto;width:1400px;}
-.weather{display:inline-block;font-size:0}
+.section .inner{display:flex;justify-content:space-between;align-items:flex-start;margin:0 auto;padding:50px 0 90px;width:1400px}
+
+.weather{display:inline-block;margin-top:15px;font-size:0}
 .weather span{font-size:14px;color:#888;vertical-align:middle}
 .ico{display:inline-block}
 .temperature{margin-left:5px}
@@ -80,15 +85,11 @@
 .dust_state{margin-left:7px;color:#4372ca}
 .temperature:after, .dust_state:after{display:inline-block;margin-left:5px;width:13px;height:13px;background-image:url(../img/ico_btn_more_small.png);background-repeat:no-repeat;background-position:center;background-size:13px 13px;content:''}
 
-select{padding:0 25px 0 10px;width:100%;height:50px;background-image:url(../img/main_select_ico.png);background-repeat:no-repeat;background-position:right 10px center;background-size:10px 6px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
-input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
-
 .search_group{max-width:600px}
 .search_area{display:flex;justify-content:space-between;width:100%;max-width:600px;border:2px solid #636677;border-radius:15px;box-sizing:border-box}
 .search_area .select_box{width:110px}
 .search_area .inp_box{width:435px}
 .search_area .btn_search{width:50px;height:50px;border-radius:13px 11px 11px 13px;background-color:#636677;background-image:url(../img/ico_search.png);background-repeat:no-repeat;background-position:center;background-size:29px 29px}
-
 .keyword_area{position:relative;line-height:50px;font-size:0}
 .keyword_tit{display:inline-block;width:90px;font-size:15px;color:#555;vertical-align:middle}
 .slide{overflow:hidden;display:inline-block;position:relative;width:450px;height:50px;vertical-align:middle}
@@ -96,7 +97,6 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .slide_list{flex:1;display:flex;justify-content:space-between;min-width:900px;user-select:none;margin-left:0}
 .slide_item{flex-shrink:0;position:relative;left:0;width:auto;margin:0 10px;transition:left 0.15s}
 .slide_link{display:inline-block;height:100%;font-size:15px;color:#777}
-
 .slide_btn_box{position:absolute;top:0;right:0;width:50px;height:50px;background:#fff;font-size:0}
 .slide_btn{position:absolute;padding:16px 7px 15px}
 .slide_btn:before{display:inline-block;border-left:7px solid #636677;border-top:6px solid transparent;border-bottom:6px solid transparent;vertical-align:middle;content:''}
@@ -104,3 +104,20 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .btn_next{right:0}
 .btn_prev:before{border-left:0;border-right:7px solid #636677}
 .btn_prev:focus,.slide_btn_box .btn_next:focus{border:1px dashed #000}
+
+.covid_status{display:block;margin-top:15px}
+.covid_status:before,.covid_status:after{display:inline-block;background-repeat:no-repeat;background-position:center;vertical-align:middle;content:''}
+.covid_status:before{margin-right:5px;width:27px;height:27px;background-image:url(../img/ico_corona.png);background-size:27px 27px}
+.covid_status:after{margin-left:5px;width:19px;height:19px;background-image:url(../img/ico_coronaLink.png);background-size:19px 19px}
+
+.banner_area{position:relative}
+.banner_area .slide_btn_box{position:absolute;left:0;top:auto;bottom:-100px;width:100%;height:100px;font-size:inherit}
+.banner_slide{width:835px;height:420px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.07)}
+
+.banner_slide_btn{width:20px;height:21px;background-image:url(../img/slice_btn.png);background-repeat:no-repeat;background-size:120px 21px}
+.banner_slide_btn.prev{background-position:0 0}
+.banner_slide_btn.pause{background-position:20px 0}
+.banner_slide_btn.play{background-position:40px 0}
+.banner_slide_btn.next{background-position:60px 0}
+
+.swiper-button-prev:after,.swiper-button-next:after{display:none}
