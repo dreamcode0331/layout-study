@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="css/seongnamsi.css">
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/plugin/swiper_9.4.1_bundle.min.js"></script>
-  <script src="js/script.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -183,25 +182,25 @@
             <button type="button" class="btn_search"><span class="blind">검색</span></button>
           </div>
           <div class="keyword_area">
-            <span style="position:absolute;left:0;top:0">인기 검색어</span>
-            <div class="slide_box">
-              <div class="swiper-container swiper_slide_horizon">
-                <ul class="swiper-wrapper">
-                  <li class="swiper-slide"><a href="#" class="slide_link">채용공고</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">금곡공원 국민체육센터</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">성남문화재여행예약</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">마루공원 예약</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">구인구직</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">보건증예약</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">심폐소생술</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">조직도</a></li>
-                  <li class="swiper-slide"><a href="#" class="slide_link">보건증</a></li>
+            <span class="keyword_tit">인기 검색어</span>
+            <div class="slide">
+              <div class="slide_box" id="slideBox">
+                <ul class="slide_list" id="slideList" onmouseover="result=false" onmouseout="result=true">
+                  <li class="slide_item"><a href="#" class="slide_link">채용공고</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">금곡공원 국민체육센터</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">성남문화재여행예약</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">마루공원 예약</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">구인구직</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">보건증예약</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">심폐소생술</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">조직도</a></li>
+                  <li class="slide_item"><a href="#" class="slide_link">보건증</a></li>
                 </ul>
               </div>
-              <div class="swiper_btn_box">
-                <div class="swiper-button-prev slide_direction_btn"></div>
-                <div class="swiper-button-next slide_direction_btn"></div>
-              </div>
+            </div>
+            <div class="slide_btn_box">
+              <button type="button" class="slide_btn btn_prev" onclick="speed=-1"></button>
+              <button type="button" class="slide_btn btn_next" onclick="speed=1"></button>
             </div>
           </div>
         </div>
@@ -209,9 +208,35 @@
     </main>
     
   </div>
-  <!-- SCRIPT -->
-  <script>
-    
-  </script>
+  <script src="js/script.js"></script>
+  <!-- <script>
+    $(function(){
+      var dimmed = $('.dimmed');
+      var menuLinkDepth1 = $('.header .gnb > .menu_list > .menu_item > .menu_link');
+      var menuListDepthArea = '.header .gnb > .menu_list > .menu_item > .menu_list_depth_area';
+
+      menuLinkDepth1.on('click', function(){
+        dimmed.hide();
+        dimmed.show();
+        $(menuListDepthArea).removeClass('is_show')
+        $(this).siblings(menuListDepthArea).addClass('is_show');
+        menuLinkDepth1.removeClass('is_show');
+        $(this).addClass('is_show');
+      });
+      menuLinkDepth1.on('mouseenter', function(){
+        dimmed.hide();
+        dimmed.show();
+        $(menuListDepthArea).removeClass('is_show')
+        $(this).siblings(menuListDepthArea).addClass('is_show');
+        menuLinkDepth1.removeClass('is_show');
+        $(this).addClass('is_show');
+      });
+      $(menuListDepthArea).on('mouseleave', function(){
+        dimmed.hide();
+        $(this).removeClass('is_show');
+        menuLinkDepth1.removeClass('is_show');
+      });
+    });
+  </script> -->
 </body>
 </html>

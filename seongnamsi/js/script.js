@@ -1,45 +1,23 @@
-$(function(){
+let move = 0
+let speed = -1;
+const result = true; // result 값이 true일 때 이미지가 슬라이드 된다.
 
-  var dimmed = $('.dimmed');
-  var menuLinkDepth1 = $('.header .gnb > .menu_list > .menu_item > .menu_link');
-  var menuListDepthArea = '.header .gnb > .menu_list > .menu_item > .menu_list_depth_area';
+function motion(){
+  if(result == true){
+    move += speed;
+    if(move <= -1000) {
+      move = 0;
+    }
+    //오른쪽으로 슬라이드
+    if(move > 0){
+      move =- 1000;
+    }
+    document.getElementById("slideBox").style.left = move + "px";
+  }
+}
 
-  menuLinkDepth1.on('click', function(){
-    dimmed.hide();
-    dimmed.show();
-    $(menuListDepthArea).removeClass('is_show')
-    $(this).siblings(menuListDepthArea).addClass('is_show');
-    menuLinkDepth1.removeClass('is_show');
-    $(this).addClass('is_show');
-  });
-  menuLinkDepth1.on('mouseenter', function(){
-    dimmed.hide();
-    dimmed.show();
-    $(menuListDepthArea).removeClass('is_show')
-    $(this).siblings(menuListDepthArea).addClass('is_show');
-    menuLinkDepth1.removeClass('is_show');
-    $(this).addClass('is_show');
-  });
-  $(menuListDepthArea).on('mouseleave', function(){
-    dimmed.hide();
-    $(this).removeClass('is_show');
-    menuLinkDepth1.removeClass('is_show');
-  });
-
-  // Swiper
-  const swiper = new Swiper('.swiper_slide_horizon', {
-    // slidesPerView: "auto",
-    // spaceBetween: 10,
-    loop: true,
-    loopedSlides: 4,
-    loopAdditionalSlides : 1,
-    // autoplay: {
-    //   delay: 5000,
-    // },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoHeight : true,
-  });
-});
+window.onload=function(){
+  setInterval(motion, 30);
+  var cloneSlide = document.getElementById("slideList").cloneNode(true); //복제
+  document.getElementById("slideBox").appendChild(cloneSlide);
+}
