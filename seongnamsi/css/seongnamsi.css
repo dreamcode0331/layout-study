@@ -120,7 +120,6 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .banner_area{position:relative}
 .banner_area .slide_btn_box{position:relative;margin-top:16px;width:100%;height:auto;font-size:0}
 .banner_slide{width:835px;height:420px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.07)}
-
 .banner_slide_btn{position:relative;width:20px;height:21px;background-image:url(../img/slice_btn.png);background-repeat:no-repeat;background-size:120px 21px;vertical-align:middle}
 .banner_slide_btn.prev,.banner_slide_btn.next{display:inline-block;left:0;top:0;margin:0}
 .banner_slide_btn.pause,.banner_slide_btn.play{position:absolute;left:66px;top:1px;}
@@ -131,3 +130,13 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .banner_slide_pagination{display:inline-block;position:relative;left:0;top:0;right:0;margin-right:10px;width:auto;font-size:16px;vertical-align:middle}
 .banner_slide_btn.all_view{margin-left:10px;background-position:-80px 0}
 .swiper-button-prev:after,.swiper-button-next:after{display:none}
+
+.mayor_area{width:520px;height:420px;background:gold}
+.mayor_top{position:relative;padding:40px 20px;min-height:309px;background-image:url(../img/mayor_img.png);background-repeat:no-repeat;background-position:100% 16px;box-sizing:border-box}
+.mayor_top .img_box{display:inline-block}
+.mayor_top .img_box img{}
+.mayor_top .txt{display:block;margin-top:20px;font-size:20px;color:#222}
+.mayor_top .txt .emphasis{padding:0 5px;font-size:33px;color:#333;font-weight:600}
+.mayor_top .link{display:inline-block;position:relative;margin-top:40px;padding:11px 12px 11px 22px;width:180px;height:46px;border-radius:46px;background:#f8dee0;font-size:19px;color:#333;vertical-align:middle;box-sizing:border-box}
+.mayor_top .link:after{position:absolute;top:8px;right:12px;width:30px;height:30px;border-radius:100%;background-color:#fff;background-image:url(../img/mayor_arr.png);background-repeat:no-repeat;background-position:50% 50%;vertical-align:middle;content:''}
+.mayor_bottom
