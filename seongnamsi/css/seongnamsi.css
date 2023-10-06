@@ -1,11 +1,16 @@
 @charset "utf-8";
-.dimmed{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:-1;background:rgba(0,0,0,.3)}
 
+
+/* z-index 수정하기 */
+
+.dimmed{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;background:rgba(0,0,0,.3)}
+.wrap{min-width:1400px}
+.container{padding-top:142px}
 /* HEADER */
-.header{position:relative;min-width:1400px}
+.header{position:fixed;width:100%;background:#fff;z-index:101}
 .header a{display:inline-block}
 .header .header_inner{border-bottom:1px solid #ececec;background:#fff}
-.header .header_config{display:flex;justify-content:space-between;position:relative;margin:0 auto;padding-right:180px;max-width:1400px;box-sizing:border-box}
+.header .header_config{display:flex;justify-content:space-between;position:relative;margin:0 auto;padding-right:180px;min-width:1400px;box-sizing:border-box}
 .header .link_site_list{display:flex}
 .header .link_site_item{border-right:1px solid #ececec}
 .header .link_site_item:first-child{border-left:1px solid #ececec}
@@ -24,7 +29,7 @@
 .header .logo .logo_link:before{display:inline-block;margin:0 20px;width:2px;height:16px;background:#d9d9d9;vertical-align:middle;content:""}
 .header .logo .logo_link:first-child:before{display:none}
 .header .header_inner + .header_inner{position:relative;border-bottom:1px solid #e6e8eb}
-.header .header_inner + .header_inner .header_config{display:flex;justify-content:space-between;position:relative;z-index:100;margin:0 auto;padding-top:10px;padding-right:108px;max-width:1400px;box-sizing:border-box}
+.header .header_inner + .header_inner .header_config{display:flex;justify-content:space-between;position:relative;z-index:101;margin:0 auto;padding-top:10px;padding-right:108px;box-sizing:border-box}
 
 .header .gnb > .menu_list > .menu_item{display:inline-block;position:relative}
 .header .gnb > .menu_list > .menu_item > .menu_link{padding:30px 29px;font-size:21px;color:#222;font-weight:500;line-height:25px}
@@ -75,7 +80,9 @@ select{padding:0 25px 0 10px;width:100%;height:50px;background-image:url(../img/
 input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
 
 /* SECTION 1 */
-.section .inner{display:flex;justify-content:space-between;align-items:flex-start;margin:0 auto;padding:50px 0 90px;width:1400px}
+.section{padding:50px 0 90px}
+.section .inner{display:flex;justify-content:space-between;align-items:flex-start;margin:0 auto;width:1400px}
+.section .inner + .inner{margin-top:50px}
 
 .weather{display:inline-block;margin-top:15px;font-size:0}
 .weather span{font-size:14px;color:#888;vertical-align:middle}
@@ -111,13 +118,16 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .covid_status:after{margin-left:5px;width:19px;height:19px;background-image:url(../img/ico_coronaLink.png);background-size:19px 19px}
 
 .banner_area{position:relative}
-.banner_area .slide_btn_box{position:absolute;left:0;top:auto;bottom:-100px;width:100%;height:100px;font-size:inherit}
+.banner_area .slide_btn_box{position:relative;margin-top:16px;width:100%;height:auto;font-size:0}
 .banner_slide{width:835px;height:420px;border-radius:20px;box-shadow:0 4px 15px rgba(0,0,0,.07)}
 
-.banner_slide_btn{width:20px;height:21px;background-image:url(../img/slice_btn.png);background-repeat:no-repeat;background-size:120px 21px}
+.banner_slide_btn{position:relative;width:20px;height:21px;background-image:url(../img/slice_btn.png);background-repeat:no-repeat;background-size:120px 21px;vertical-align:middle}
+.banner_slide_btn.prev,.banner_slide_btn.next{display:inline-block;left:0;top:0;margin:0}
+.banner_slide_btn.pause,.banner_slide_btn.play{position:absolute;left:66px;top:1px;}
 .banner_slide_btn.prev{background-position:0 0}
-.banner_slide_btn.pause{background-position:20px 0}
-.banner_slide_btn.play{background-position:40px 0}
-.banner_slide_btn.next{background-position:60px 0}
-
+.banner_slide_btn.pause{background-position:-20px 0}
+.banner_slide_btn.play{display:none;background-position:-40px 0}
+.banner_slide_btn.next{margin-left:20px;background-position:-60px 0}
+.banner_slide_pagination{display:inline-block;position:relative;left:0;top:0;right:0;margin-right:10px;width:auto;font-size:16px;vertical-align:middle}
+.banner_slide_btn.all_view{margin-left:10px;background-position:-80px 0}
 .swiper-button-prev:after,.swiper-button-next:after{display:none}
