@@ -58,8 +58,8 @@ $('.banner_slide_btn.play').on('click',function(){
 })
 
 // 탭메뉴
-const tabServiceMenuBtn = document.querySelectorAll('.tab_service_menu_btn');
-const tabServiceContItem = document.querySelectorAll('.tab_service_cont_item');
+const tabServiceMenuBtn = document.querySelectorAll('.tab_menu_btn');
+const tabServiceContItem = document.querySelectorAll('.tab_cont_item');
 
 tabServiceMenuBtn.forEach((item, i) => {
   item.addEventListener('click', () => {
