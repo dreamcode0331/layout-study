@@ -10,7 +10,7 @@
 .header{position:fixed;width:100%;background:#fff;z-index:101}
 .header a{display:inline-block}
 .header .header_inner{border-bottom:1px solid #ececec;background:#fff}
-.header .header_config{display:flex;justify-content:space-between;position:relative;margin:0 auto;padding-right:180px;min-width:1400px;box-sizing:border-box}
+.header .header_config{display:flex;justify-content:space-between;position:relative;margin:0 auto;padding-right:180px;max-width:1400px;box-sizing:border-box}
 .header .link_site_list{display:flex}
 .header .link_site_item{border-right:1px solid #ececec}
 .header .link_site_item:first-child{border-left:1px solid #ececec}
@@ -83,6 +83,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .section{padding:50px 0 90px}
 .section .inner{display:flex;justify-content:space-between;align-items:flex-start;margin:0 auto;width:1400px}
 .section .inner + .inner{margin-top:50px}
+.section_intro{background: linear-gradient(180deg, #f7f7f7 0,#fff 40%,#fff 100%)}
 
 .weather{display:inline-block;margin-top:15px;font-size:0}
 .weather span{font-size:14px;color:#888;vertical-align:middle}
@@ -112,7 +113,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .btn_prev:before{border-left:0;border-right:7px solid #636677}
 .btn_prev:focus,.slide_btn_box .btn_next:focus{border:1px dashed #000}
 
-.covid_status{display:block;margin-top:15px}
+.covid_status{display:block;margin-top:15px;color:#333}
 .covid_status:before,.covid_status:after{display:inline-block;background-repeat:no-repeat;background-position:center;vertical-align:middle;content:''}
 .covid_status:before{margin-right:5px;width:27px;height:27px;background-image:url(../img/ico_corona.png);background-size:27px 27px}
 .covid_status:after{margin-left:5px;width:19px;height:19px;background-image:url(../img/ico_coronaLink.png);background-size:19px 19px}
@@ -131,12 +132,18 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .banner_slide_btn.all_view{margin-left:10px;background-position:-80px 0}
 .swiper-button-prev:after,.swiper-button-next:after{display:none}
 
-.mayor_area{width:520px;height:420px;background:gold}
-.mayor_top{position:relative;padding:40px 20px;min-height:309px;background-image:url(../img/mayor_img.png);background-repeat:no-repeat;background-position:100% 16px;box-sizing:border-box}
-.mayor_top .img_box{display:inline-block}
-.mayor_top .img_box img{}
-.mayor_top .txt{display:block;margin-top:20px;font-size:20px;color:#222}
-.mayor_top .txt .emphasis{padding:0 5px;font-size:33px;color:#333;font-weight:600}
-.mayor_top .link{display:inline-block;position:relative;margin-top:40px;padding:11px 12px 11px 22px;width:180px;height:46px;border-radius:46px;background:#f8dee0;font-size:19px;color:#333;vertical-align:middle;box-sizing:border-box}
-.mayor_top .link:after{position:absolute;top:8px;right:12px;width:30px;height:30px;border-radius:100%;background-color:#fff;background-image:url(../img/mayor_arr.png);background-repeat:no-repeat;background-position:50% 50%;vertical-align:middle;content:''}
-.mayor_bottom
+.mayor_area{overflow:hidden;width:520px;height:420px;background:#fff}
+.mayor_inner{position:relative;padding:40px 20px;min-height:305px;background-image:url(../img/mayor_img.png);background-repeat:no-repeat;background-position:100% 16px;box-sizing:border-box}
+.mayor_inner .img_box{display:inline-block}
+.mayor_inner .txt{display:block;margin-top:20px;font-size:20px;color:#222}
+.mayor_inner .txt .emphasis{padding:0 5px;font-size:33px;color:#333;font-weight:600}
+.mayor_inner .link{display:inline-block;position:relative;margin-top:40px;padding:11px 12px 11px 22px;width:180px;height:46px;border-radius:46px;background:#f8dee0;font-size:19px;color:#333;vertical-align:middle;box-sizing:border-box}
+.mayor_inner .link:after{position:absolute;top:8px;right:12px;width:30px;height:30px;border-radius:100%;background-color:#fff;background-image:url(../img/mayor_arr.png);background-repeat:no-repeat;background-position:50% 50%;vertical-align:middle;content:''}
+.mayor_menu_list{padding:22px 20px;height:115px;border-radius:15px;background:#d84048;font-size:0;box-sizing:border-box;}
+.mayor_menu_item{display:inline-block;width:120px}
+.mayor_menu_link{display:block;font-size:16px;text-align:center;color:#fff;letter-spacing:-1.5px}
+.mayor_menu_link:before{display:block;margin:0 auto 9px;width:44px;height:44px;background-image: url(../img/ico_mayorItem.png);background-repeat:no-repeat;content:''}
+.mayor_menu_item:nth-child(1) .mayor_menu_link:before{background-position:0 0}
+.mayor_menu_item:nth-child(2) .mayor_menu_link:before{background-position:-44px 0}
+.mayor_menu_item:nth-child(3) .mayor_menu_link:before{background-position:-88px 0}
+.mayor_menu_item:nth-child(4) .mayor_menu_link:before{background-position:-132px 0}
