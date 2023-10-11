@@ -159,22 +159,40 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .section_service{padding:60px 0 0;background:#f5f8f9}
 .section_service .inner{display:flex;justify-content:space-between}
 
-.tab_area{width:950px}
+.tab_area.type1{width:402px}
+.tab_area.type2{width:940px}
+.tab_area.type3{width:950px}
+
 .tab_area.tab_service{padding:0 35px 90px 0;background-image:url(../img/mainService_bg01.png),url(../img/mainService_bg02.png);background-repeat:no-repeat;background-position:0 100%, 100% 100%}
 .tab_menu{display:flex;justify-content:space-between;font-size:0}
-.tab_menu_btn{display:inline-block;position:relative;width:20%;height:53px;border:1px solid #e6e8eb;background:#fff;font-size:21px;color:#333;box-sizing:border-box}
-.tab_menu_btn:first-child{border-radius:10px 0 0 10px}
+.tab_menu_btn{display:inline-block;position:relative;border:1px solid #e6e8eb;border-left:none;background:#fff;color:#333;box-sizing:border-box}
+.tab_menu_btn:before{display:inline-block;background-repeat:no-repeat;vertical-align:middle;content:''}
+
+.tab_menu_btn:first-child{border-radius:10px 0 0 10px;border-left:1px solid #e6e8eb}
 .tab_menu_btn:last-child{border-radius:0 10px 10px 0}
-.tab_service .tab_menu_btn{width:180px;height:65px;border-radius:10px}
-.tab_service .tab_menu_btn:before{display:inline-block;margin-right:15px;background-repeat:no-repeat;vertical-align:middle;content:''}
-.tab_service .tab_menu_btn:nth-child(1):before{width:40px;height:31px;background-image:url(../img/mainService_01.png)}
-.tab_service .tab_menu_btn:nth-child(2):before{width:29px;height:43px;background-image:url(../img/mainService_02.png)}
-.tab_service .tab_menu_btn:nth-child(3):before{width:39px;height:40px;background-image:url(../img/mainService_03.png)}
-.tab_service .tab_menu_btn:nth-child(4):before{width:37px;height:32px;background-image:url(../img/mainService_04.png)}
-.tab_service .tab_menu_btn:nth-child(5):before{width:34px;height:33px;background-image:url(../img/mainService_05.png)}
-.tab_service .tab_menu_btn::after{display:none;position:absolute;left:50%;transform:translateX(-50%);bottom:-12px;border-top:12px solid #d84048;border-left:7px solid transparent;border-right:7px solid transparent;content:''}
-.tab_menu_btn.is_on{background:#d84048;color:#fff}
-.tab_menu_btn.is_on::after{display:block}
+
+
+.tab_area.type1 .tab_menu_btn{width:33.333%;height:59px;font-size:19px}
+.tab_area.type1 .tab_menu_btn:hover{border-color:#d84048;color:#d84048}
+.tab_area.type1 .tab_menu_btn:not(:first-child):hover:after{position:absolute;left:0;top:0;width:1px;height:100%;background:#d84048;content:''}
+.tab_area.type1.ico .tab_menu_btn:before{margin-right:10px;background-size:cover}
+.tab_area.type1.ico .tab_menu_btn:nth-child(1):before{width:25px;height:23.5px;background-image:url(../img/noticeIcon_01.png)}
+.tab_area.type1.ico .tab_menu_btn:nth-child(2):before{width:25px;height:22px;background-image:url(../img/noticeIcon_02.png)}
+.tab_area.type1.ico .tab_menu_btn:nth-child(3):before{width:23px;height:23px;background-image:url(../img/noticeIcon_03.png)}
+
+.tab_area.type2 .tab_menu{padding-right:56px}
+.tab_area.type2 .tab_menu_btn{width:20%;height:59px;font-size:20px}
+
+.tab_area.type3 .tab_menu_btn{width:180px;height:65px;border:0;border-radius:10px;font-size:21px}
+.tab_area.type3.ico .tab_menu_btn:before{margin-right:15px}
+.tab_area.type3.ico .tab_menu_btn:nth-child(1):before{width:40px;height:31px;background-image:url(../img/mainService_01.png)}
+.tab_area.type3.ico .tab_menu_btn:nth-child(2):before{width:29px;height:43px;background-image:url(../img/mainService_02.png)}
+.tab_area.type3.ico .tab_menu_btn:nth-child(3):before{width:39px;height:40px;background-image:url(../img/mainService_03.png)}
+.tab_area.type3.ico .tab_menu_btn:nth-child(4):before{width:37px;height:32px;background-image:url(../img/mainService_04.png)}
+.tab_area.type3.ico .tab_menu_btn:nth-child(5):before{width:34px;height:33px;background-image:url(../img/mainService_05.png)}
+.tab_area.type3 .tab_menu_btn:after{display:none;position:absolute;left:50%;transform:translateX(-50%);bottom:-12px;border-top:12px solid #d84048;border-left:7px solid transparent;border-right:7px solid transparent;content:''}
+.tab_area.type3 .tab_menu_btn.is_on:after{display:block}
+.tab_area.type2 .tab_menu_btn.is_on,.tab_area.type3 .tab_menu_btn.is_on{background:#d84048;color:#fff}
 
 .tab_cont{margin-top:35px;min-height:205px}
 .tab_cont_item{display:none}

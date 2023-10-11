@@ -15,7 +15,7 @@
     .guide_tit{padding:20px 0;font-size:32px;color:#000}
     .guide_sub_tit{padding:10px 0;font-size:24px;color:blueviolet}
     .guide_box{padding:20px 0 40px}
-    .guide_case{padding:0 0 10px;font-size:20px;color:#000}
+    .guide_case{padding:20px 0 10px;font-size:20px;color:#000}
   </style>
 </head>
 <body>
@@ -34,8 +34,26 @@
       <div class="guide_box">
         <h2 class="guide_sub_tit">Tab</h2>
         <div class="guide_cont">
-          <h3 class="guide_case">- Default</h3>
-          <div class="tab_area">
+          <h3 class="guide_case">- Type1 (Defualt)</h3>
+          <div class="tab_area type1">
+            <div class="tab_menu">
+              <button type="button" class="tab_menu_btn">메뉴1</button>
+              <button type="button" class="tab_menu_btn">메뉴2</button>
+              <button type="button" class="tab_menu_btn">메뉴3</button>
+            </div>
+          </div>
+
+          <h3 class="guide_case">- Type1 (icon)</h3>
+          <div class="tab_area type1 ico">
+            <div class="tab_menu">
+              <button type="button" class="tab_menu_btn">메뉴1</button>
+              <button type="button" class="tab_menu_btn">메뉴2</button>
+              <button type="button" class="tab_menu_btn">메뉴3</button>
+            </div>
+          </div>
+
+          <h3 class="guide_case">- type2 (Defualt)</h3>
+          <div class="tab_area type2">
             <div class="tab_menu">
               <!-- [D] tab_menu_btn 클릭했을 때, is_on 클래스 추가 -->
               <button type="button" class="tab_menu_btn is_on">메뉴1</button>
@@ -44,76 +62,31 @@
               <button type="button" class="tab_menu_btn">메뉴4</button>
               <button type="button" class="tab_menu_btn">메뉴5</button>
             </div>
-            <div class="tab_cont">
-              <!-- [D] tab_cont_item 활성화 시, is_on 클래스 추가 -->
-              <div class="tab_cont_item is_on">
-                <ul class="tab_menu_list">
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-1</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-2</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-3</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-4</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-5</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-6</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-7</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴1-8</a></li>
-                </ul>
-              </div>
-              <div class="tab_cont_item">
-                탭 컨텐츠 - 2
-                <ul class="tab_menu_list">
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-1</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-2</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-3</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-4</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-5</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-6</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-7</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴2-8</a></li>
-                </ul>
-              </div>
-              <div class="tab_cont_item">
-                탭 컨텐츠 - 3
-                <ul class="tab_menu_list">
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-1</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-2</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-3</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-4</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-5</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-6</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-7</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴3-8</a></li>
-                </ul>
-              </div>
-              <div class="tab_cont_item">
-                탭 컨텐츠 - 4
-                <ul class="tab_menu_list">
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-1</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-2</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-3</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-4</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-5</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-6</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-7</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴4-8</a></li>
-                </ul>
-              </div>
-              <div class="tab_cont_item">
-                탭 컨텐츠 - 5
-                <ul class="tab_menu_list">
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-1</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-2</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-3</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-4</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-5</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-6</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-7</a></li>
-                  <li class="tab_menu_item"><a href="#" class="tab_menu_link">메뉴5-8</a></li>
-                </ul>
-              </div>
+          </div>
+
+          <h3 class="guide_case">- type3 (Defualt)</h3>
+          <div class="tab_area type3">
+            <div class="tab_menu">
+              <!-- [D] tab_menu_btn 클릭했을 때, is_on 클래스 추가 -->
+              <button type="button" class="tab_menu_btn is_on">메뉴1</button>
+              <button type="button" class="tab_menu_btn">메뉴2</button>
+              <button type="button" class="tab_menu_btn">메뉴3</button>
+              <button type="button" class="tab_menu_btn">메뉴4</button>
+              <button type="button" class="tab_menu_btn">메뉴5</button>
             </div>
           </div>
-          <h3 class="guide_case">- .tab_area.tab_service</h3>
-          
+
+          <h3 class="guide_case">- type3 (icon)</h3>
+          <div class="tab_area type3 ico">
+            <div class="tab_menu">
+              <!-- [D] tab_menu_btn 클릭했을 때, is_on 클래스 추가 -->
+              <button type="button" class="tab_menu_btn is_on">메뉴1</button>
+              <button type="button" class="tab_menu_btn">메뉴2</button>
+              <button type="button" class="tab_menu_btn">메뉴3</button>
+              <button type="button" class="tab_menu_btn">메뉴4</button>
+              <button type="button" class="tab_menu_btn">메뉴5</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -57,23 +57,48 @@ $('.banner_slide_btn.play').on('click',function(){
   $('.banner_slide_btn.play').hide().siblings('.banner_slide_btn.pause').show();
 })
 
-// 탭메뉴
-const tabServiceMenuBtn = document.querySelectorAll('.tab_menu_btn');
-const tabServiceContItem = document.querySelectorAll('.tab_cont_item');
+// 탭메뉴 type2
+function tabType2(){
+  const tabServiceMenuBtn = document.querySelectorAll('.tab_area.type2 .tab_menu_btn');
+  const tabServiceContItem = document.querySelectorAll('.tab_area.type2 .tab_cont_item');
 
-tabServiceMenuBtn.forEach((item, i) => {
-  item.addEventListener('click', () => {
-    tabServiceContItem.forEach((content) => {
-      content.classList.remove('is_on');
-    });
+  tabServiceMenuBtn.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      tabServiceContItem.forEach((content) => {
+        content.classList.remove('is_on');
+      });
 
-    tabServiceMenuBtn.forEach((content) => {
-      content.classList.remove('is_on');
-    });
+      tabServiceMenuBtn.forEach((content) => {
+        content.classList.remove('is_on');
+      });
 
-    tabServiceMenuBtn[i].classList.add('is_on');
-    tabServiceContItem[i].classList.add('is_on');
+      tabServiceMenuBtn[i].classList.add('is_on');
+      tabServiceContItem[i].classList.add('is_on');
+    })
   })
-})
+}
+tabType2();
+
+// 탭메뉴 type3
+function tabType3(){
+  const tabServiceMenuBtn = document.querySelectorAll('.tab_area.type3 .tab_menu_btn');
+  const tabServiceContItem = document.querySelectorAll('.tab_area.type3 .tab_cont_item');
+
+  tabServiceMenuBtn.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      tabServiceContItem.forEach((content) => {
+        content.classList.remove('is_on');
+      });
+
+      tabServiceMenuBtn.forEach((content) => {
+        content.classList.remove('is_on');
+      });
+
+      tabServiceMenuBtn[i].classList.add('is_on');
+      tabServiceContItem[i].classList.add('is_on');
+    })
+  })
+}
+tabType3();
 
 
