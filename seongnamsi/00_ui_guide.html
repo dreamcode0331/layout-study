@@ -54,13 +54,16 @@
 
           <h3 class="guide_case">- type2 (Defualt)</h3>
           <div class="tab_area type2">
-            <div class="tab_menu">
-              <!-- [D] tab_menu_btn 클릭했을 때, is_on 클래스 추가 -->
-              <button type="button" class="tab_menu_btn is_on">메뉴1</button>
-              <button type="button" class="tab_menu_btn">메뉴2</button>
-              <button type="button" class="tab_menu_btn">메뉴3</button>
-              <button type="button" class="tab_menu_btn">메뉴4</button>
-              <button type="button" class="tab_menu_btn">메뉴5</button>
+            <div class="tab_inner">
+              <div class="tab_menu">
+                <!-- [D] tab_menu_btn 클릭했을 때, is_on 클래스 추가 -->
+                <button type="button" class="tab_menu_btn is_on">메뉴1</button>
+                <button type="button" class="tab_menu_btn">메뉴2</button>
+                <button type="button" class="tab_menu_btn">메뉴3</button>
+                <button type="button" class="tab_menu_btn">메뉴4</button>
+                <button type="button" class="tab_menu_btn">메뉴5</button>
+              </div>
+              <a href="#" class="tab_more_view"><span class="blind">더보기</span></a>
             </div>
           </div>
 
@@ -92,24 +95,49 @@
     </div>
   </div>
   <script>
-    // 탭메뉴
-    const tabServiceMenuBtn = document.querySelectorAll('.tab_menu_btn');
-    const tabServiceContItem = document.querySelectorAll('.tab_cont_item');
+    // 탭메뉴 type2
+    function tabType2(){
+      const tabServiceMenuBtn = document.querySelectorAll('.tab_area.type2 .tab_menu_btn');
+      const tabServiceContItem = document.querySelectorAll('.tab_area.type2 .tab_cont_item');
 
-    tabServiceMenuBtn.forEach((item, i) => {
-      item.addEventListener('click', () => {
-        tabServiceContItem.forEach((content) => {
-          content.classList.remove('is_on');
-        });
+      tabServiceMenuBtn.forEach((item, i) => {
+        item.addEventListener('click', () => {
+          tabServiceContItem.forEach((content) => {
+            content.classList.remove('is_on');
+          });
 
-        tabServiceMenuBtn.forEach((content) => {
-          content.classList.remove('is_on');
-        });
+          tabServiceMenuBtn.forEach((content) => {
+            content.classList.remove('is_on');
+          });
 
-        tabServiceMenuBtn[i].classList.add('is_on');
-        tabServiceContItem[i].classList.add('is_on');
+          tabServiceMenuBtn[i].classList.add('is_on');
+          tabServiceContItem[i].classList.add('is_on');
+        })
       })
-    })
+    }
+    tabType2();
+
+    // 탭메뉴 type3
+    function tabType3(){
+      const tabServiceMenuBtn = document.querySelectorAll('.tab_area.type3 .tab_menu_btn');
+      const tabServiceContItem = document.querySelectorAll('.tab_area.type3 .tab_cont_item');
+
+      tabServiceMenuBtn.forEach((item, i) => {
+        item.addEventListener('click', () => {
+          tabServiceContItem.forEach((content) => {
+            content.classList.remove('is_on');
+          });
+
+          tabServiceMenuBtn.forEach((content) => {
+            content.classList.remove('is_on');
+          });
+
+          tabServiceMenuBtn[i].classList.add('is_on');
+          tabServiceContItem[i].classList.add('is_on');
+        })
+      })
+    }
+    tabType3();
   </script>
 </body>
 </html>
