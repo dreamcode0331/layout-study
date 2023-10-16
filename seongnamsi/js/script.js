@@ -77,6 +77,7 @@ const bannerSlideCol = new Swiper('.banner_slide.col', {
     disableOnInteraction: false,
   },
   loop: true,
+  loopAdditionalSlides : 1,
   pagination: {
     el: '.swiper-pagination',
     type: 'fraction',
