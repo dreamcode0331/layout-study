@@ -320,7 +320,6 @@
       </div>
     </header>
     <!-- // HEADER -->
-
     <main class="container">
       <section class="section section_intro">
         <h2 class="blind">대기정보/통합검색/코로나19/메인배너/열린시장실</h2>
@@ -636,6 +635,70 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer_inner">
+        <div class="dropdown_area">
+          <div class="dropdown_box">
+            <button class="dropdown_btn">산하기관</button>
+            <ul class="dropdown_list">
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남도시개발공사</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남산업진흥원</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시근로자종합복지관</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남장애인종합복지관</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시새마을이동도서관</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남예총</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남문화재단</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시상권활성화재단</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시청소년재단(청소년시설)</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시체육회</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시장애인체육회</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시장학회</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시자원봉사센터</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시노인보건센터</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시금융복지상담센터</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시육아종합지원센터</a></li>
+            </ul>
+          </div>
+          <div class="dropdown_box">
+            <button class="dropdown_btn">산하기관</button>
+            <ul class="dropdown_list">
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남도시개발공사</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남산업진흥원</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시근로자종합복지관</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남장애인종합복지관</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시새마을이동도서관</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남예총</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남문화재단</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시상권활성화재단</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시청소년재단(청소년시설)</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시체육회</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시장애인체육회</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시장학회</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시자원봉사센터</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시노인보건센터</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시금융복지상담센터</a></li>
+              <li class="dropdown_item"><a href="#" class="dropdown_link">성남시육아종합지원센터</a></li>
+            </ul>
+          </div>
+          <div class="dropdown_box">
+            <a href="#" class="dropdown_link">배너광장</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer_inner">
+        <ul class="fnb">
+          <li class="fnb_item"><a href="#" class="fnb_link">개인정보처리방침</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link">영상정보처리기기 운영·관리 방침</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link">저작권정책</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link">홈페이지모니터</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link">RSS</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link">모바일앱</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link">오시는길</a></li>
+        </ul>
+        <address class="addr">우) 13437 경기도 성남시 중원구 성남대로 997 (여수동)</address>
+        <cite class="cite">Copyright &copy;Seongnam City. All Rights Reserved.</cite>
+      </div>
+    </footer>
   </div>
   <script src="js/script.js"></script>
   <script>
@@ -667,6 +730,9 @@
         $(menuListDepthArea).removeClass('is_show')
         menuLinkDepth1.removeClass('is_show');
       });
+      $('.dropdown_btn').on('click', function(){
+        $(this).toggleClass('is_open');
+      })
     });
   </script>
 </body>

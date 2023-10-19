@@ -145,5 +145,3 @@ function tabType3(){
   })
 }
 tabType3();
-
-

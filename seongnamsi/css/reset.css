@@ -11,5 +11,5 @@ input,button,select{-webkit-appearance:none;appearance:none;border:0;border-radi
 button{cursor:pointer}
 input::-ms-clear{display:none} /* input내 clear 버튼 제거 : IE10+ */
 img,fieldset{border:0;vertical-align:top}
-em,address{font-style:normal}
+em,address,cite{font-style:normal}
 .blind,caption span,legend{overflow:hidden;position:absolute;width:1px;height:1px;margin:-1px;padding:0;clip:rect(0,0,0,0)}
