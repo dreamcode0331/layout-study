@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/plugin/swiper_9.4.1_bundle.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/plugin/swiper_9.4.1_bundle.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  
 </head>
 <body>
   <div class="wrap">
@@ -687,7 +687,7 @@
       </div>
       <div class="footer_inner">
         <ul class="fnb">
-          <li class="fnb_item"><a href="#" class="fnb_link">개인정보처리방침</a></li>
+          <li class="fnb_item"><a href="#" class="fnb_link txt_red">개인정보처리방침</a></li>
           <li class="fnb_item"><a href="#" class="fnb_link">영상정보처리기기 운영·관리 방침</a></li>
           <li class="fnb_item"><a href="#" class="fnb_link">저작권정책</a></li>
           <li class="fnb_item"><a href="#" class="fnb_link">홈페이지모니터</a></li>
@@ -695,45 +695,19 @@
           <li class="fnb_item"><a href="#" class="fnb_link">모바일앱</a></li>
           <li class="fnb_item"><a href="#" class="fnb_link">오시는길</a></li>
         </ul>
-        <address class="addr">우) 13437 경기도 성남시 중원구 성남대로 997 (여수동)</address>
+        <address class="addr">우&#41; 13437 경기도 성남시 중원구 성남대로 997 (여수동)</address>
         <cite class="cite">Copyright &copy;Seongnam City. All Rights Reserved.</cite>
+        <div class="footer_side">
+          <a href="#"><img src="img/logo_callcenter.png" alt="성남시콜센터 1577-3100"></a>
+          <a href="#"><img src="img/mark_wa.png" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2023.09.20 ~ 2024.09.19"></a>
+          <span><img src="img/qr_cord.jpg" alt="성남시청 QR코드(https://www.seongnam.go.kr/main.do)"></span>
+        </div>
       </div>
     </footer>
   </div>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/plugin/swiper_9.4.1_bundle.min.js"></script>
   <script src="js/script.js"></script>
-  <script>
-    $(function(){
-      var dimmed = $('.dimmed');
-      var gnb = document.querySelector('.gnb');
-      var menuListDepthArea = document.querySelectorAll('.menu_list_depth_area');
-      var menuLinkDepth1 = $('.header .gnb > .menu_list > .menu_item > .menu_link');
-      // var menuListDepthArea = '.header .gnb > .menu_list > .menu_item > .menu_list_depth_area';
-      dimmed.hide();
-      menuLinkDepth1.on('click', function(){
-        dimmed.hide();
-        dimmed.show();
-        $(menuListDepthArea).removeClass('is_show')
-        $(this).siblings(menuListDepthArea).addClass('is_show');
-        menuLinkDepth1.removeClass('is_show');
-        $(this).addClass('is_show');
-      });
-      menuLinkDepth1.on('mouseenter', function(){
-        dimmed.hide();
-        dimmed.show();
-        $(menuListDepthArea).removeClass('is_show')
-        $(this).siblings(menuListDepthArea).addClass('is_show');
-        menuLinkDepth1.removeClass('is_show');
-        $(this).addClass('is_show');
-      });
-      $(gnb, menuListDepthArea).on('mouseleave', function(){
-        dimmed.hide();
-        $(menuListDepthArea).removeClass('is_show')
-        menuLinkDepth1.removeClass('is_show');
-      });
-      $('.dropdown_btn').on('click', function(){
-        $(this).toggleClass('is_open');
-      })
-    });
-  </script>
 </body>
 </html>

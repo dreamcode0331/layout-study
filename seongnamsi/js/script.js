@@ -1,28 +1,52 @@
-// 통합검색 슬라이더
-// let move = 0
-// let speed = -1;
-// let result = true;
+$(document).ready(function (){
+  // $.noConflict();
+  var dimmed = $('.dimmed');
+  var gnb = document.querySelector('.gnb');
+  var menuListDepthArea = document.querySelectorAll('.menu_list_depth_area');
+  var menuLinkDepth1 = $('.header .gnb > .menu_list > .menu_item > .menu_link');
+  // var menuListDepthArea = '.header .gnb > .menu_list > .menu_item > .menu_list_depth_area';
+  dimmed.hide();
+  menuLinkDepth1.on('click', function(){
+    dimmed.hide();
+    dimmed.show();
+    $(menuListDepthArea).removeClass('is_show')
+    $(this).siblings(menuListDepthArea).addClass('is_show');
+    menuLinkDepth1.removeClass('is_show');
+    $(this).addClass('is_show');
+  });
+  menuLinkDepth1.on('mouseenter', function(){
+    dimmed.hide();
+    dimmed.show();
+    $(menuListDepthArea).removeClass('is_show')
+    $(this).siblings(menuListDepthArea).addClass('is_show');
+    menuLinkDepth1.removeClass('is_show');
+    $(this).addClass('is_show');
+  });
+  $(gnb, menuListDepthArea).on('mouseleave', function(){
+    dimmed.hide();
+    $(menuListDepthArea).removeClass('is_show')
+    menuLinkDepth1.removeClass('is_show');
+  });
 
-// function motion(){
-//   console.log('1111111111111111');
-//   if(result == true){
-//     move += speed;
-//     if(move <= -1000) {
-//       move = 0;
-//     }
-//     if(move > 0) {
-//       move =- 1000;
-//     } 
-//     document.getElementById("slideBox").style.left = move + "px";
-//   }
-// }
-
-// window.onload=function(){
-//   setInterval(motion, 50);
-//   let cloneSlide = document.getElementById("slideList").cloneNode(true); //복제
-//   document.getElementById("slideBox").appendChild(cloneSlide);
-// }
-
+  $('.dropdown_btn').on('click', function(){
+    $(this).toggleClass('is_open');
+    if($('.dropdown_btn').hasClass('is_open')) {
+      $('.dropdown_btn').removeClass('is_open');
+      $(this).addClass('is_open');
+    } 
+  });
+  // $.noConflict();
+  // 통합검색 슬라이더 
+  $('.slide_list').slick({
+    variableWidth: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    prevArrow : $('.btn_prev'), 
+    nextArrow : $('.btn_next'), 
+  });
+})
 
 // 메인배너 슬라이드
 const bannerSlide = new Swiper('.banner_slide', {
