@@ -2,7 +2,7 @@
 /* 에스코어드림 */
 @font-face {
   font-family: 'SCDream';
-  src: url('../font/SCDream4.otf') format('woff'),
+  src: url('../font/SCDream4.otf') format('opentype'),
     url('../font/SCDream4.woff') format('woff'),
     url('../font/SCDream4.woff2') format('woff2');
   font-weight: 400;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'SCDream';
-  src: url('../font/SCDream5.otf') format('woff'),
+  src: url('../font/SCDream5.otf') format('opentype'),
     url('../font/SCDream5.woff') format('woff'),
     url('../font/SCDream5.woff2') format('woff2');
   font-weight: 500;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: 'SCDream';
-  src: url('../font/SCDream6.otf') format('woff'),
+  src: url('../font/SCDream6.otf') format('opentype'),
     url('../font/SCDream6.woff') format('woff'),
     url('../font/SCDream6.woff2') format('woff2');
   font-weight: 600;
