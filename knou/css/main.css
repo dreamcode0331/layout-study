@@ -18,6 +18,20 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 
 .test{font-size:50px}
 
+/* HEADER */
+.header .logo:before{display:block;width:350px;height:52px;background-image:url(../img/img_logo_header.png);background-repeat:no-repeat;background-position:center;background-size:cover;content:''}
+.header .gnb_item{display:inline-block;padding:0 21px}
+.header .gnb_item_btn{font-size:18px;color:#222;font-weight:400}
+.header .login{display:block;width:90px;height:88px;background-color:#1c90fd;}
+.header .search_btn{display:block;width:90px;height:88px;background-color:#1b60c6;}
+.header .login:before,.header .search_btn:before{display:block;width:90px;height:88px;background-repeat:no-repeat;background-position:center;font-size:13px;text-align:center;color:#fff;}
+.header .login:before{background-image:url(../img/ico_login.png);background-size:21px 27px;content:''}
+.header .search_btn:before{background-image:url(../img/ico_search.png);background-size:25px 25px;content:''}
+
+
+
+
+
 /* KEY FRAMES */
 /* @keyframes bounce {
   0%,100%{transform:translateY(0)}
