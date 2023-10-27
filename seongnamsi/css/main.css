@@ -12,7 +12,11 @@
 .txt_overflow.line3{-webkit-line-clamp:3}
 .txt_overflow.line4{-webkit-line-clamp:4}
 
-/* SWIPER SLIDE */
+/* SELECT, INPUT */
+select{padding:0 25px 0 10px;width:100%;height:50px;background-image:url(../img/main_select_ico.png);background-repeat:no-repeat;background-position:right 10px center;background-size:10px 6px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
+input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
+
+/* SLIDE */
 .banner_frame{margin-top:50px;width:100%}
 .banner_area{position:relative}
 .banner_area .slide_btn_box{position:relative;margin-top:16px;width:100%;height:auto;font-size:0}
@@ -108,7 +112,6 @@
 .header .gnb > .menu_list > .menu_item > .menu_link:hover:after,
 .header .gnb > .menu_list > .menu_item > .menu_link.is_show:before,
 .header .gnb > .menu_list > .menu_item > .menu_link.is_show:after{display:block}
-
 .header .gnb > .menu_list > .menu_item > .menu_list_depth_area{display:none;position:fixed;left:0;top:142px;width:100%;background:#fff}
 .header .gnb > .menu_list > .menu_item > .menu_list_depth_area.is_show{display:block}
 .header .gnb > .menu_list > .menu_item > .menu_list_depth_area > .menu_list.depth{display:flex;flex-wrap:wrap;margin: 0 auto;width:1400px;padding:30px 15px;box-sizing:border-box}
@@ -138,10 +141,6 @@
 .header .btn_box .btn_search:before,.header .btn_box .link_sitemap:before{display:inline-block;background-repeat:no-repeat;background-position:center;vertical-align:top;content:""}
 .header .btn_box .btn_search:before{width:26px;height:26px;background-image:url(../img/ico_btnTopSearch.png);background-size:26px 26px}
 .header .btn_box .link_sitemap:before{width:25px;height:20px;background-image:url(../img/ico_btnTopTotal.png);background-size:25px 20px}
-
-/* SELECT, INPUT */
-select{padding:0 25px 0 10px;width:100%;height:50px;background-image:url(../img/main_select_ico.png);background-repeat:no-repeat;background-position:right 10px center;background-size:10px 6px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
-input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
 
 /* SECTION */
 .section{padding:50px 0 90px}
