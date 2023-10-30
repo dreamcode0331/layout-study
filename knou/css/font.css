@@ -24,6 +24,13 @@
 }
 @font-face {
   font-family: 'notokr';
+  src: url('../font/notokr-medium.ttf') format('truetype'),
+    url('../font/notokr-medium.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'notokr';
   src: url('../font/notokr-bold.ttf') format('truetype'),
     url('../font/notokr-bold.woff') format('woff'),
     url('../font/notokr-bold.woff2') format('woff2');
