@@ -6,41 +6,62 @@
   <title>국립한국방송통신대학교 홈페이지 레이아웃 연습</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/plugin/slick.css"/>
+  <link rel="stylesheet" href="css/plugin/slick-theme.css"/>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="wrap">
     <div class="dimmed"></div>
     <!-- HEADER -->
+    
     <header class="header">
-      <h1><a href="#" class="logo"><span class="blind">국립한국방송통신대학교</span></a></h1>
-      <ul class="gnb">
-        <li class="gnb_item"><button type="button" class="gnb_item_btn">대학소개</button></li>
-        <li class="gnb_item"><button type="button" class="gnb_item_btn">대학 · 대학원</button></li>
-        <li class="gnb_item"><button type="button" class="gnb_item_btn">입학</button></li>
-        <li class="gnb_item"><button type="button" class="gnb_item_btn">학사안내</button></li>
-        <li class="gnb_item"><button type="button" class="gnb_item_btn">대학생활</button></li>
-        <li class="gnb_item"><button type="button" class="gnb_item_btn">지역대학</button></li>
-      </ul>
-      <a href="#" class="login">로그인</a>
-      <button type="button" class="search_btn">통합검색</button>
+      <div class="header_top">
+        <button type="button" class="popup_switch_btn"><span class="ico_arrow">팝업닫기</span></button>
+        <div class="header_top_util">
+          <a href="#" class="header_top_util_item info"><span class="txt">맞춤정보</span></a>
+          <a href="#" class="header_top_util_item global"><span class="txt">ENGLISH</span></a>
+          <div href="#" class="header_top_util_item zoom">
+            <button type="button" class="plus"><span class="blind">확대</span></button>
+            <button type="button" class="default">기본</button>
+            <button type="button" class="minus"><span class="blind">축소</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <h1 class="logo"><a href="#" class="logo_link"><span class="blind">국립한국방송통신대학교</span></a></h1>
+        <ul class="gnb">
+          <li class="gnb_item"><button type="button" class="gnb_item_btn">대학소개</button></li>
+          <li class="gnb_item"><button type="button" class="gnb_item_btn">대학 · 대학원</button></li>
+          <li class="gnb_item"><button type="button" class="gnb_item_btn">입학</button></li>
+          <li class="gnb_item"><button type="button" class="gnb_item_btn">학사안내</button></li>
+          <li class="gnb_item"><button type="button" class="gnb_item_btn">대학생활</button></li>
+          <li class="gnb_item"><button type="button" class="gnb_item_btn">지역대학</button></li>
+        </ul>
+        <div class="header_bottom_util">
+          <a href="#" class="header_bottom_util_item login"><span class="txt">로그인</span></a>
+          <button type="button" class="header_bottom_util_item search_btn"><span class="txt">통합검색</span></button>
+          <a href="#" class="header_bottom_util_item site_map"><span class="blind">사이트맵</span></a>
+        </div>
+      </div>
     </header>
     <!-- // HEADER -->
-    <main class="container">
-      <section class="section section_intro">
-        <h2 class="blind"></h2>
-        <p class="test">가나다라마바사아자차카타파하</p>
-        <p class="test">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-        <p class="test">abcdefghijklmnopqrstuvwxyz</p>
-        <p class="test">12345678910 1234567910</p>
-      </section>
+    <main class="container" style="margin-top:131px">
+      <div class="slide">
+        <ul class="single_slide">
+          <li class="slide_item"><a href="#" class="slide_link"><img src="img/img_main_banner1.png" alt=""></a></li>
+          <li class="slide_item"><a href="#" class="slide_link"><img src="img/img_main_banner2.png" alt=""></a></li>
+          <li class="slide_item"><a href="#" class="slide_link"><img src="img/img_main_banner3.png" alt=""></a></li>
+          <li class="slide_item"><a href="#" class="slide_link"><img src="img/img_main_banner4.png" alt=""></a></li>
+        </ul>
+      </div>
     </main>
     <footer class="footer">
 
     </footer>
   </div>
   <script src="js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/plugin/slick.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
