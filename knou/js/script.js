@@ -15,7 +15,7 @@ $(function(){
     fade: true,
     cssEase: 'linear',
     autoplay: true,
-    autoplaySpeed: 100,
+    autoplaySpeed: 1500,
   });
   $('.pause').on('click', function(){
     $(this).hide();

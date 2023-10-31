@@ -1,6 +1,5 @@
 @charset "utf-8";
-
-.wrap{min-width:1400px}
+.wrap{}
 .dimmed{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:102;background:rgba(0,0,0,.3)}
 
 .tit{display:inline-block;padding-bottom:35px;font-size:30px;font-weight:600;color:#333}
@@ -46,7 +45,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .header .logo_link:before{display:block;width:350px;height:52px;background-image:url(../img/img_logo_header.png);background-repeat:no-repeat;background-position:center;background-size:cover;content:''}
 .header .gnb{width:calc(100% - (620px + 5%));text-align:right}
 .header .gnb_item{display:inline-block;padding:0 21px}
-.header .gnb_item_btn{font-size:22px;color:#222;font-weight:600}
+.header .gnb_item_btn{font-size:2.2rem;color:#222;font-weight:600}
 .header .gnb_item_btn:hover{color:#183d93}
 
 .header .header_bottom_util{font-size:0}
@@ -55,7 +54,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .header .login,.header .search_btn{background-position-y:18px;font-size:13px;text-align:center;color:#fff;line-height:120px}
 .header .login{background-color:#1c90fd;background-image:url(../img/ico_login.png)}
 .header .search_btn{background-color:#1b60c6;background-image:url(../img/ico_search.png)}
-.header .site_map{background-color:#1c3d8d;background-image:url(../img/icon_sitemap.png)}
+.header .site_map{background-color:#1c3d8d;background-image:url(../img/ico_sitemap.png)}
 
 .header .txt{position:relative}
 .header .txt:before{position:absolute;left:0;bottom:-3px;width:0%;height:1px;background-color:#fff;transition:width 0.2s;content:''}
@@ -64,15 +63,61 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .header .global:hover .txt:before{background-color:#ffb400}
 
 .container{height:500vh}
-.slick-dots{bottom:180px}
+
+/* SLIDE - SINGLE SLIDE */
+.slick-dots{bottom:18%}
 .slick-dots li{margin:0 3px}
 .slick-dots li button:before{font-size:15px}
 .slick-dots li button:hover:before, .slick-dots li button:focus:before{opacity:.25}
 .slick-dots li.slick-active button:before{opacity:1;color:#0084ff}
+.slick-slide img{max-width:100%}
+.slick-dotted.slick-slider{margin-bottom:0}
+
+.slide{position:relative}
+.slide_control_box{position:absolute;left:50%;bottom:18%;width:26px;height:26px;transform:translate(200%)}
+.slide_control_box .slide_btn{position:absolute;left:0;top:0;padding:13px;width:10px;height:15px;background-repeat:no-repeat;background-position:center;background-size:10px 15px}
+.slide_control_box .play{display:none;background-image:url(../img/ico_slide_play.png)}
+.slide_control_box .pause{background-image:url(../img/ico_slide_pause.png)}
+
+
+/* 학생 서비스 */
+.user_service{display:flex;}
+.user_serice_inner{display:flex;justify-content:flex-end;align-items:center;padding:0 30px;width:50%;height:103px;background:#1f72b7;text-align:right;box-sizing:border-box}
+.user_serice_inner + .user_serice_inner{justify-content:flex-start;background:#1f93ff;text-align:left}
+.user_serice_inner + .user_serice_inner .service_tit:before{width:47px;height:39px;background:url(../img/ico_user_service2.png) no-repeat center / 47px 39px;content:''}
+.service_box{display:flex;justify-content:space-between;align-items:center;max-width:670px}
+.service_tit{margin-right:10px;min-width:73px;font-size:16px;color:#fff;text-align:center}
+.service_tit:before{display:block;margin: 0 auto 10px;width:50px;height:43px;background:url(../img/ico_user_service1.png) no-repeat center / 50px 43px;content:''}
+.service_list{display:flex;justify-content:space-between;width:100%}
+.service_item{margin:0 9px}
+.service_link{position:relative;font-size:18px;color:#fff;font-family:'notokr', san-serif}
+.service_link:before{position:absolute;left:0;bottom:-3px;width:0;height:1px;background:#fff;transition:width 0.2s;content:''}
+.service_link:hover:before{width:100%}
 
 
 /* KEY FRAMES */
 /* @keyframes bounce {
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(10px)}
+} */
+
+@media (max-width:1640px) {
+}
+@media (max-width:1480px) {
+  .header .gnb_item_btn{font-size:2rem}
+}
+@media (max-width:1400px) {
+  .header .gnb_item_btn{font-size:1.6rem}
+}
+@media (max-width:1100px) {
+  .header .gnb_item_btn{font-size:1.6rem}
+}
+/* @media (max-width:1023px) {
+  html{font-size:52.5%}
+}
+@media (max-width:767px) {
+  html{font-size:52.5%}
+}
+@media (max-width:479px) {
+  html{font-size:52.5%}
 } */
