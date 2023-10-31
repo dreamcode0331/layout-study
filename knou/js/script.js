@@ -14,7 +14,18 @@ $(function(){
     speed: 500,
     fade: true,
     cssEase: 'linear',
-    // autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 100,
   });
+  $('.pause').on('click', function(){
+    $(this).hide();
+    $('.play').show();
+    $('.single_slide').slick('slickPause');
+
+  });
+  $('.play').on('click', function(){
+    $(this).hide();
+    $('.pause').show();
+    $('.single_slide').slick('slickPlay');
+  })
 });
