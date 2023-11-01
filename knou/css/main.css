@@ -85,7 +85,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .user_serice_inner{display:flex;justify-content:flex-end;align-items:center;padding:0 30px;width:50%;height:103px;background:#1f72b7;text-align:right;box-sizing:border-box}
 .user_serice_inner + .user_serice_inner{justify-content:flex-start;background:#1f93ff;text-align:left}
 .user_serice_inner + .user_serice_inner .service_tit:before{width:47px;height:39px;background:url(../img/ico_user_service2.png) no-repeat center / 47px 39px;content:''}
-.service_box{display:flex;justify-content:space-between;align-items:center;max-width:670px}
+.service_box{display:flex;justify-content:space-between;align-items:center;min-width:670px}
 .service_tit{margin-right:10px;min-width:73px;font-size:16px;color:#fff;text-align:center}
 .service_tit:before{display:block;margin: 0 auto 10px;width:50px;height:43px;background:url(../img/ico_user_service1.png) no-repeat center / 50px 43px;content:''}
 .service_list{display:flex;justify-content:space-between;width:100%}
