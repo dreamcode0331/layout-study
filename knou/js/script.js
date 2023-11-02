@@ -8,14 +8,32 @@ $(function(){
   })
 
   $('.single_slide').slick({
-    dots: true,
-    arrows: false,
     infinite: true,
-    speed: 500,
     fade: true,
-    cssEase: 'linear',
     autoplay: true,
     autoplaySpeed: 1500,
+    dots: true,
+    arrows: false,
+  });
+
+  $('.multiple_slide').slick({
+    infinite: true,
+    slidesToShow: 3,
+    lidesToScroll: 1,
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 1500,
+        }
+      },
+    ]
   });
   $('.pause').on('click', function(){
     $(this).hide();
@@ -27,5 +45,5 @@ $(function(){
     $(this).hide();
     $('.pause').show();
     $('.single_slide').slick('slickPlay');
-  })
+  });
 });

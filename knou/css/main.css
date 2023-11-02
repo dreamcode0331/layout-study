@@ -2,8 +2,12 @@
 .wrap{}
 .dimmed{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:102;background:rgba(0,0,0,.3)}
 
+/* TEXT */
 .tit{display:inline-block;padding-bottom:35px;font-size:30px;font-weight:600;color:#333}
 .tit_info{margin-left:15px;font-size:18px;font-weight:500}
+.section_tit{padding-bottom:20px;font-size:30px;color:#333}
+.section_tit .txt_thin{padding-left:10px;font-weight:200}
+
 .txt_overflow{overflow:hidden;display:-webkit-box;word-wrap:break-word;-webkit-box-orient:vertical}
 .txt_overflow.line1{display:block;white-space:nowrap;text-overflow:ellipsis}
 .txt_overflow.line2{-webkit-line-clamp:2}
@@ -13,9 +17,6 @@
 /* SELECT, INPUT */
 select{padding:0 25px 0 10px;width:100%;height:50px;background-image:url(../img/main_select_ico.png);background-repeat:no-repeat;background-position:right 10px center;background-size:10px 6px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
 input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-height:50px;box-sizing:border-box}
-
-.test{font-size:50px}
-
 
 /* HEADER */
 .header{position:fixed;left:0;top:0;right:0;z-index:100}
@@ -48,8 +49,8 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .header .gnb_item_btn{font-size:2.2rem;color:#222;font-weight:600}
 .header .gnb_item_btn:hover{color:#183d93}
 
-.header .header_bottom_util{font-size:0}
-.header .header_bottom_util_item{display:inline-block;width:90px;height:88px;background-repeat:no-repeat;background-position:center;vertical-align:middle}
+.header .header_bottom_util{display:flex;width:270px;font-size:0}
+.header .header_bottom_util_item{display:inline-block;flex:1;height:88px;background-repeat:no-repeat;background-position:center;vertical-align:middle}
 
 .header .login,.header .search_btn{background-position-y:18px;font-size:13px;text-align:center;color:#fff;line-height:120px}
 .header .login{background-color:#1c90fd;background-image:url(../img/ico_login.png)}
@@ -79,7 +80,6 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .slide_control_box .play{display:none;background-image:url(../img/ico_slide_play.png)}
 .slide_control_box .pause{background-image:url(../img/ico_slide_pause.png)}
 
-
 /* 학생 서비스 */
 .user_service{display:flex;}
 .user_serice_inner{display:flex;justify-content:flex-end;align-items:center;padding:0 30px;width:50%;height:103px;background:#1f72b7;text-align:right;box-sizing:border-box}
@@ -94,6 +94,46 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .service_link:before{position:absolute;left:0;bottom:-3px;width:0;height:1px;background:#fff;transition:width 0.2s;content:''}
 .service_link:hover:before{width:100%}
 
+/* SECTION_SNS_UKNOW */
+.section_sns_uknou{display:flex;justify-content:space-between;column-gap:4.28%;margin:0 auto;padding-top:40px;width:100%;max-width:1400px}
+
+.thumb_link_area{flex:1;height:auto;position:relative}
+.thumb_link_area:hover .thumb_layer,.thumb_link_area:focus .thumb_layer{display:flex}
+.thumb_img{display:block}
+
+.thumb_layer{display:none;flex-direction:column;justify-content:center;position:absolute;left:0;top:0;padding:11.32%;width:100%;height:100%;background:rgba(46,91,182,.9);font-size:0;text-align:center;box-sizing:border-box;transition:0.4s}
+.thumb_layer_txt{display:inline-block;padding-bottom:15px;font-size:18px;color:#fff;font-weight:600;letter-spacing:-0.02em;}
+.thumb_layer_btn{display:inline-block;margin:0 auto;padding:7.5% 14%;width:65.85%;height:45px;border:1px solid #fff;border-radius:100px;font-size:12px;color:#fff;box-sizing:border-box}
+.thumb_layer_btn:after{display:inline-block;margin-left:15px;width:17px;height:8px;background:url(../img/ico_arrow_sns.png) no-repeat right center;content:''}
+
+.sns_area{position:relative;/*width:790px*/width:calc(790/1400*100%)}
+.sns_area img{display:block;max-width:100%}
+
+.sns_list{position:absolute;top:0;right:0;font-size:0}
+.sns_item{display:inline-block;margin-left:8px}
+.sns_link{display:block;width:40px;height:40px;background-image:url(../img/sp_sns.jpg);background-repeat:no-repeat;transition:0.4s}
+.sns_link.youtube{background-position:0 0px}
+.sns_link.instagram{background-position:-40px 0px}
+.sns_link.facebook{background-position:-80px 0px}
+.sns_link.blog{background-position:-120px 0px}
+.sns_link:hover.youtube,.sns_link:focus.youtube{background-position:0 -40px}
+.sns_link:hover.instagram,.sns_link:focus.instagram{background-position:-40px -40px}
+.sns_link:hover.facebook,.sns_link:focus.facebook{background-position:-80px -40px}
+.sns_link:hover.blog,.sns_link:focus.blog{background-position:-120px -40px}
+
+.uknou_area{display:flex;padding-top:56px}
+.uknou_area .thumb_link_area{flex-basis:265px;height:fit-content;margin-left:20px;border: 1px solid #d0d0d0}
+.uknou_area .thumb_link_area:first-of-type{margin-left:0}
+.uknou_area .thumb_link_area + .thumb_link_area .thumb_layer_btn{background:#13accf}
+.uknou_area .thumb_link_area + .thumb_link_area .thumb_layer_btn:hover{background:#15c2e9}
+.uknou_area img{max-width:100%}
+.uknou_area .thumb_layer{display:flex;justify-content:flex-end;background:transparent}
+.uknou_area .thumb_layer_btn{background:#18386c;border:0}
+.uknou_area .thumb_layer_btn:hover{background:#2353a1}
+
+.multiple_slide .slick-list{margin-left: -20px}
+.multiple_slide .slick-track{display:flex}
+.multiple_slide .slick-slide{margin-left: 20px}
 
 /* KEY FRAMES */
 /* @keyframes bounce {
@@ -111,6 +151,11 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 }
 @media (max-width:1100px) {
   .header .gnb_item_btn{font-size:1.6rem}
+}
+@media (max-width:768px) {
+  .header .gnb{display:none}
+  .sns_area{width:100%}
+  .section_sns_uknou{flex-direction: column;}
 }
 /* @media (max-width:1023px) {
   html{font-size:52.5%}
