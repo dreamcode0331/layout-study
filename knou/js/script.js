@@ -34,7 +34,7 @@ $(function(){
   //       }
   //     },
   //   ]
-  });
+  //});
 
   $('.pause').on('click', function(){
     $(this).hide();
