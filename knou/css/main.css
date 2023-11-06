@@ -95,20 +95,22 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .service_link:hover:before{width:100%}
 
 /* SECTION_SNS_UKNOW */
-.section_sns_uknou{margin:0 auto;padding-top:40px;width:100%;max-width:1400px;font-size:0}
+.section_sns_uknou{display:flex;justify-content:center;align-items:center;margin:0 auto;padding-top:40px;width:100%;max-width:1400px;font-size:0}
 
 
-.thumb_link_area{display:inline-block;position:relative;max-width:250px}
+.thumb_link_area{display:inline-block;position:relative}
 .thumb_img{display:block;}
 
 .thumb_layer{display:block;position:absolute;left:0;top:0;padding:11.32%;width:100%;height:100%;background:rgba(46,91,182,.9);font-size:0;text-align:center;box-sizing:border-box;transition:0.4s}
+.thumb_layer_inner{position:relative;top:50%;transform:translateY(-50%)}
 .thumb_layer_txt{display:inline-block;padding-bottom:15px;font-size:18px;color:#fff;font-weight:600;letter-spacing:-0.02em;}
-.thumb_layer_btn{display:inline-block;margin:0 auto;padding:7.5% 14%;width:65.85%;height:45px;border:1px solid #fff;border-radius:100px;font-size:12px;color:#fff;box-sizing:border-box}
+.thumb_layer_btn{display:inline-block;margin:0 auto;padding:7.5% 14%;width:100%;max-width:135px;height:45px;border:1px solid #fff;border-radius:100px;font-size:12px;color:#fff;box-sizing:border-box}
 .thumb_layer_btn:after{display:inline-block;margin-left:15px;width:17px;height:8px;background:url(../img/ico_arrow_sns.png) no-repeat right center;content:''}
+.thumb_btn{display:inline-block;margin:0 auto;padding:7.5% 14%;width:100%;max-width:135px;height:45px;border:1px solid #fff;border-radius:100px;font-size:12px;color:#fff;box-sizing:border-box}
 
 /* .thumb_link_area:hover .thumb_layer{display:block} */
 
-.sns_area{display:inline-block;position:relative;width:calc(820/1400*100%);vertical-align:middle}
+.sns_area{position:relative;width:calc(100% - 580px)}
 .sns_area img{display:block;max-width:100%}
 
 .sns_list{position:absolute;top:0;right:23px;font-size:0}
@@ -122,14 +124,15 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .sns_link:hover.instagram,.sns_link:focus.instagram{background-position:-40px -40px}
 .sns_link:hover.facebook,.sns_link:focus.facebook{background-position:-80px -40px}
 .sns_link:hover.blog,.sns_link:focus.blog{background-position:-120px -40px}
+.sns_area .thumb_link_area{max-width:250px}
 
-.uknou_area{display:inline-block;padding-top:56px;width:calc(580/1400*100%);vertical-align:middle;text-align:right}
-.uknou_area .thumb_link_area{margin-left:23px;padding:0;max-width:265px;border: 1px solid #d0d0d0}
+.uknou_area{margin-left:27px;padding-top:56px;width:calc(100% - 820px);min-width:580px;text-align:right}
+.uknou_area img{max-width:100%}
+.uknou_area .thumb_link_area{margin-left:23px;padding:0;border: 1px solid #d0d0d0;box-sizing:border-box}
 .uknou_area .thumb_link_area:first-of-type{margin-left:0}
 .uknou_area .thumb_link_area + .thumb_link_area .thumb_layer_btn{background:#13accf}
 .uknou_area .thumb_link_area + .thumb_link_area .thumb_layer_btn:hover{background:#15c2e9}
-.uknou_area img{max-width:100%}
-.uknou_area .thumb_layer{display:flex;justify-content:flex-end;background:transparent}
+.uknou_area .thumb_layer{top:auto;bottom:0;height:auto;background:transparent}
 .uknou_area .thumb_layer_btn{background:#18386c;border:0}
 .uknou_area .thumb_layer_btn:hover{background:#2353a1}
 
@@ -148,15 +151,25 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
   .header .gnb_item_btn{font-size:2rem}
 }
 @media (max-width:1400px) {
-  .header .gnb_item_btn{font-size:1.6rem}
+  .header .gnb_item_btn{font-size:1.6rem} 
+  .uknou_area{min-width:515px}
+  .uknou_area .thumb_link_area{max-width:228px}
 }
 @media (max-width:1100px) {
   .header .gnb_item_btn{font-size:1.6rem}
+
+  .thumb_layer_txt{font-size:14px}
+  .thumb_layer_btn{height:32px}
+
+  .uknou_area{min-width:350px}
+  .uknou_area .thumb_link_area{max-width:153px}
 }
-@media (max-width:768px) {
+@media (max-width:900px) {
   .header .gnb{display:none}
   .sns_area{width:100%}
+  .uknou_area{width:100%;min-width:0;text-align:center}
   .section_sns_uknou{flex-direction: column;}
+  .uknou_area .thumb_link_area{max-width:unset}
 }
 /* @media (max-width:1023px) {
   html{font-size:52.5%}

@@ -16,25 +16,26 @@ $(function(){
     arrows: false,
   });
 
-  $('.multiple_slide').slick({
-    infinite: true,
-    slidesToShow: 3,
-    lidesToScroll: 1,
+  // $('.multiple_slide').slick({
+  //   infinite: true,
+  //   slidesToShow: 3,
+  //   lidesToScroll: 1,
 
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-          autoplay: true,
-          autoplaySpeed: 1500,
-        }
-      },
-    ]
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         dots: true,
+  //         autoplay: true,
+  //         autoplaySpeed: 1500,
+  //       }
+  //     },
+  //   ]
   });
+
   $('.pause').on('click', function(){
     $(this).hide();
     $('.play').show();
