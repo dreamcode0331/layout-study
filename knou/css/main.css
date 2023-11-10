@@ -70,6 +70,14 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .slide_control_box .play{display:none;background-image:url(../img/ico_slide_play.png)}
 .slide_control_box .pause{background-image:url(../img/ico_slide_pause.png)}
 
+.slide_control_box.type2{left:0;bottom:33px;width:100%;height:40px;transform:translate(0);}
+.slide_control_box.type2 .slide_btn{width:40px;height:40px;border-radius:100%;background-image:url(../img/sp_slide_btn.png);background-color:#c0c0c0;background-size:80px 120px}
+.slide_control_box.type2 .prev{left:0;background-position:0 0}
+.slide_control_box.type2 .play{display:none;left:45px;background-color:#a3a3a3;background-position:-40px -80px}
+.slide_control_box.type2 .pause{left:45px;background-color:#a3a3a3;background-position:0 -80px}
+.slide_control_box.type2 .next{left:90px;background-position:0 -40px}
+.slide_control_box.type2 .slide_btn:hover{background-color:#3f81fa}
+
 /* 학생 서비스 */
 .user_service{display:flex;}
 .user_serice_inner{display:flex;justify-content:flex-end;align-items:center;padding:0 30px;width:50%;height:103px;background:#1f72b7;text-align:right;box-sizing:border-box}
@@ -84,7 +92,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .service_link:before{position:absolute;left:0;bottom:-3px;width:0;height:1px;background:#fff;transition:width 0.2s;content:''}
 .service_link:hover:before{width:100%}
 
-.section_inner{display:flex;justify-content:center;align-items:center;margin:0 auto;padding-top:40px;width:100%;max-width:1400px;font-size:0}
+.section_inner{display:flex;justify-content:center;align-items:center;margin:0 auto;padding:40px 0 50px;width:100%;max-width:1400px;font-size:0}
 
 /* SECTION_SNS_UKNOW */
 .thumb_link_area{display:inline-block;position:relative;margin-left:27px}
@@ -124,15 +132,30 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .uknou_area .thumb_layer_btn:hover{background:#2353a1}
 
 
-.section_publish{padding-bottom:500vh}
+.section_publish{display:flex;padding-bottom:500vh}
+.section_publish .section_inner{display:block}
+.section_publish .section_inner + .section_inner{background:#f3f3f3}
 .section_inner{display:flex}
-.publish_list{}
-.publish_item{display:flex}
-.publish_desc{padding-right:20px}
-.publish_link{font-size:20px;color:#333}
-.publish_date{display:block;font-size:14px;color:#939393}
-.publish_img_box{display:block;width:352px;height:230px;background:gray}
+.publish_area{position:relative;margin-left:auto;margin-right:30px;width:700px;box-sizing:border-box}
+.section_publish .section_inner + .section_inner .publish_area{margin-left:0;margin-right:auto;padding-left:30px}
+/* .publish_list{overflow:hidden} */
+.publish_item{display:flex !important;justify-content: space-between}
+.publish_desc{padding-right:20px;min-width:301px;box-sizing:border-box}
+.publish_link{display:block;margin-bottom:30px;font-size:20px;color:#333;line-height:1.3;word-break:keep-all}
+.publish_date{display:block;position:relative;padding-bottom:15px;margin-bottom:15px;font-size:14px;color:#939393;letter-spacing:0}
+.publish_date:after{position:absolute;left:0;bottom:0;width:50px;height:1px;background:#939393;content:''}
+.publish_img_box{display:block;min-width:352px;min-height:275px}
+.section_publish .section_inner + .section_inner .publish_img_box img{width:100%}
 
+.publish_list_slide .slick-dots{top:-38px;right:0;bottom:auto;width:auto}
+.publish_list_slide .slick-dots li{margin:0 2px;width:7px;height:7px;}
+.publish_list_slide .slick-dots li button{padding:0;width:7px;height:7px;border-radius:100%;background:#999}
+.publish_list_slide .slick-dots li button:before{display:none;font-size:7px}
+.publish_list_slide .slick-dots li button:hover, .slick-dots li button:focus{background:#306ea9}
+.publish_list_slide .slick-dots li.slick-active button{opacity:1;background:#3f81fa}
+.publish_list_slide .slick-list{margin:0 -30px}
+.publish_list_slide .slick-slide{margin: 0 30px}
+.section_publish .section_inner + .section_inner .slide_control_box.type2{left:47px}
 
 /* KEY FRAMES */
 /* @keyframes bounce {
