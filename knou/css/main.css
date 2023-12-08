@@ -61,7 +61,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .slick-dots li button:before{font-size:15px}
 .slick-dots li button:hover:before, .slick-dots li button:focus:before{opacity:.25}
 .slick-dots li.slick-active button:before{opacity:1;color:#0084ff}
-.slick-slide img{max-width:100%}
+.slick-slide img{width:100%}
 .slick-dotted.slick-slider{margin-bottom:0}
 
 .slide{position:relative;font-size:0}
@@ -132,7 +132,7 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .uknou_area .thumb_layer_btn:hover{background:#2353a1}
 
 
-.section_publish{display:flex;padding-bottom:500vh}
+.section_publish{display:flex}
 .section_publish .section_inner{display:block}
 .section_publish .section_inner + .section_inner{background:#f3f3f3}
 .section_inner{display:flex}
@@ -157,6 +157,30 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .publish_list_slide .slick-slide{margin: 0 30px}
 .section_publish .section_inner + .section_inner .slide_control_box.type2{left:47px}
 
+.section_info{margin:0 auto;max-width:1400px;border:1px solid #1b60c6;font-size:0;box-sizing:border-box}
+.local_univ_info_list{display:inline-block;width:50%;position:relative;vertical-align:middle}
+.local_univ_info_list:before{position:absolute;left:0;top:0;width:100%;height:230px;background:#3673cd url(../img/img_map_logo.png) no-repeat left center;content:''}
+.local_univ_info_item{position:relative;width:670px;height:230px;padding:27px 30px 25px 30px;box-sizing:border-box}
+.local_univ_info_item:nth-child(1){background:url(../img/img_map_seoul.png) no-repeat right center}
+.local_univ_info_link{display:block;font-size:0}
+.local_univ_info_link span{display:flex;align-items:center}
+.local_univ_tit_small{font-size:14px;color:#fff}
+.local_univ_tit{margin-top:2px;font-size:25px;color:#fff}
+.local_univ_name{margin-top:17px;font-size:30px;color:#01e1fc;font-weight:700}
+.local_univ_name:before{display:inline-block;margin-right:10px;width:4px;height:27px;background:#01e1fc;content:''}
+.local_univ_name:after{display:inline-block;margin-left:10px;width:30px;height:30px;background:url(../img/ico_local_univ_home.png) no-repeat center;content:''}
+.local_univ_phone{margin-top:17px;font-size:26px;color:#fff;font-weight:600}
+.local_univ_phone:before{display:inline-block;margin-right:15px;width:19px;height:20px;background:url(../img/ico_local_univ_phone.png) no-repeat center;content:''}
+.local_univ_addr{margin-top:5px;font-size:16px;color:#fff}
+.local_univ_addr:before{display:inline-block;margin-right:15px;width:15px;height:20px;background:url(../img/ico_local_univ_location.png) no-repeat center;content:''}
+
+.family_site{display:inline-block;width:50%;height:230px;padding:10px 10px 10px 40px;vertical-align:middle;box-sizing:border-box}
+.family_site_list{display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(2, 110px);align-items:center}
+.family_site_item{}
+.family_site_item:before{display:inline-block;margin-right:11px;width:39px;height:39px;background:url(../img/ico_family_site1.png) no-repeat center/cover;vertical-align:middle;content:''}
+.family_site_link{position:relative;font-size:16px;color:#414141;font-weight:600;vertical-align:middle;font-family:'notokr'}
+.family_site_link:after{position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#000;transition: all 0.2s;content:''}
+.family_site_link:hover:after{width:100%}
 /* KEY FRAMES */
 /* @keyframes bounce {
   0%,100%{transform:translateY(0)}
