@@ -78,6 +78,20 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .slide_control_box.type2 .next{left:90px;background-position:0 -40px}
 .slide_control_box.type2 .slide_btn:hover{background-color:#3f81fa}
 
+.slide_control_box.type3{left:auto;right:0;bottom:0;padding:7px 10px 8px 17px;;min-width:145px;height:40px;transform:translate(0);border-radius:100px 0 0 100px;background-color:rgba(38,41,46,.8);line-height:26px;box-sizing:border-box}
+.slide_control_box.type3 .slide_count{display:inline-block;margin-right:20px;font-size:0}
+.slide_control_box.type3 .slide_count span{font-size:14px;color:#fff;vertical-align:middle}
+.slide_control_box.type3 .slide_count .now{position:relative;padding-right:24px;}
+.slide_control_box.type3 .slide_count .now:after{position:absolute;top:-3px;right:9px;font-size:14px;color:#748399;content:'/'}
+.slide_control_box.type3 .slide_count .total{color:#748399}
+.slide_control_box.type3 .slide_btn_set{display:inline-block;position:relative}
+.slide_control_box.type3 .slide_btn{top:50%;transform:translateY(-50%);padding:0;width:10px;height:16px;background-image:url(../img/ico_arrow_local.png);background-size:20px 48px}
+.slide_control_box.type3 .prev{left:0;background-position:0 0}
+.slide_control_box.type3 .play{display:none;left:24px;background-position:-10px -32px}
+.slide_control_box.type3 .pause{left:24px;background-position:0 -32px}
+.slide_control_box.type3 .next{left:48px;background-position:0 -16px}
+.slide_control_box.type3 .slide_btn:hover{background-color:#3f81fa}
+
 /* 학생 서비스 */
 .user_service{display:flex;}
 .user_serice_inner{display:flex;justify-content:flex-end;align-items:center;padding:0 30px;width:50%;height:103px;background:#1f72b7;text-align:right;box-sizing:border-box}
@@ -157,11 +171,19 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .publish_list_slide .slick-slide{margin: 0 30px}
 .section_publish .section_inner + .section_inner .slide_control_box.type2{left:47px}
 
-.section_info{margin:0 auto;max-width:1400px;border:1px solid #1b60c6;font-size:0;box-sizing:border-box}
-.local_univ_info_list{display:inline-block;width:50%;position:relative;vertical-align:middle}
+.section_info{margin:0 auto 50px;max-width:1400px;border:1px solid #1b60c6;font-size:0;box-sizing:border-box}
+.local_unive_area{display:inline-block;position:relative;width:50%;vertical-align:middle}
 .local_univ_info_list:before{position:absolute;left:0;top:0;width:100%;height:230px;background:#3673cd url(../img/img_map_logo.png) no-repeat left center;content:''}
-.local_univ_info_item{position:relative;width:670px;height:230px;padding:27px 30px 25px 30px;box-sizing:border-box}
-.local_univ_info_item:nth-child(1){background:url(../img/img_map_seoul.png) no-repeat right center}
+.local_univ_info_item{position:relative;width:670px;height:230px;padding:27px 30px 25px 30px;background-repeat:no-repeat;background-position:right center;box-sizing:border-box}
+.local_univ_info_item.local1{background-image:url(../img/img_map_seoul.png)}
+.local_univ_info_item.local2{background-image:url(../img/img_map_busan.png)}
+.local_univ_info_item.local3{background-image:url(../img/img_map_daegu.png)}
+.local_univ_info_item.local4{background-image:url(../img/img_map_incheon.png)}
+.local_univ_info_item.local5{background-image:url(../img/img_map_gwangju.png)}
+.local_univ_info_item.local6{background-image:url(../img/img_map_daejeon.png)}
+.local_univ_info_item.local7{background-image:url(../img/img_map_ulsan.png)}
+.local_univ_info_item.local8{background-image:url(../img/img_map_gyeonggii.png)}
+
 .local_univ_info_link{display:block;font-size:0}
 .local_univ_info_link span{display:flex;align-items:center}
 .local_univ_tit_small{font-size:14px;color:#fff}
@@ -174,13 +196,42 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .local_univ_addr{margin-top:5px;font-size:16px;color:#fff}
 .local_univ_addr:before{display:inline-block;margin-right:15px;width:15px;height:20px;background:url(../img/ico_local_univ_location.png) no-repeat center;content:''}
 
-.family_site{display:inline-block;width:50%;height:230px;padding:10px 10px 10px 40px;vertical-align:middle;box-sizing:border-box}
+.family_site_area{display:inline-block;width:50%;height:230px;padding:10px 10px 10px 40px;vertical-align:middle;box-sizing:border-box}
 .family_site_list{display:grid;grid-template-columns:repeat(4, 1fr);grid-template-rows:repeat(2, 110px);align-items:center}
-.family_site_item{}
-.family_site_item:before{display:inline-block;margin-right:11px;width:39px;height:39px;background:url(../img/ico_family_site1.png) no-repeat center/cover;vertical-align:middle;content:''}
+.family_site_item:before{display:inline-block;margin-right:11px;width:39px;height:39px;background-repeat:no-repeat;background-position:center;background-size:cover;vertical-align:middle;content:''}
+.family_site_item:nth-child(1):before{background-image:url(../img/ico_family_site1.png)}
+.family_site_item:nth-child(2):before{background-image:url(../img/ico_family_site2.png)}
+.family_site_item:nth-child(3):before{background-image:url(../img/ico_family_site3.png)}
+.family_site_item:nth-child(4):before{background-image:url(../img/ico_family_site4.png)}
+.family_site_item:nth-child(5):before{background-image:url(../img/ico_family_site5.png)}
+.family_site_item:nth-child(6):before{background-image:url(../img/ico_family_site6.png)}
+.family_site_item:nth-child(7):before{background-image:url(../img/ico_family_site7.png)}
+.family_site_item:nth-child(8):before{background-image:url(../img/ico_family_site8.png)}
 .family_site_link{position:relative;font-size:16px;color:#414141;font-weight:600;vertical-align:middle;font-family:'notokr'}
 .family_site_link:after{position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#000;transition: all 0.2s;content:''}
 .family_site_link:hover:after{width:100%}
+
+.section_shortcut{display:flex;font-family:'notokr'}
+.shorcut_inner{flex:1;position:relative}
+.shorcut_inner.is_open .shortcut_box_area{display:block}
+.shortcut_btn{position:relative;padding:15px 50px 16px 30px;width:100%;border-right:1px solid #494957;background:#31394a;font-size:18px;color:#ffff;text-align:left;box-sizing:border-box}
+.shortcut_btn:hover{color:#ebae1c}
+.shorcut_inner:last-child .shortcut_btn{border-right:0}
+.ico_plus{position:absolute;top:50%;transform:translateY(-50%);right:20px;width:21px;height:21px}
+/* .shortcut_btn:hover .ico_plus{transform:rotate(180deg)} */
+.ico_plus:before,.ico_plus:after{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#747474;content:''}
+.ico_plus:before{width:1px;height:20px}
+.ico_plus:after{width:20px;height:1px}
+.shortcut_box_area{display:none;overflow:auto;position:absolute;left:0;right:0;bottom:55px;padding:13px 18px;height:285px;max-height:285px;background:#1c3d8d;box-sizing:border-box}
+.shortcut_box{}
+.shortcut_tit{font-size:20px;color:#95bce1}
+.shortcut_list{margin:6px 0 15px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,.5)}
+.shortcut_item{padding:6px 0 7px}
+.shortcut_link{position:relative;font-size:16px;color:#fff}
+.shortcut_link:after{display:inline-block;padding-left:15px;width:12px;height:12px;background:url(../img/ico_shortcut.png) no-repeat center;content:''}
+
+
+
 /* KEY FRAMES */
 /* @keyframes bounce {
   0%,100%{transform:translateY(0)}
