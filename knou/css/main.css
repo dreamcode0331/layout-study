@@ -211,19 +211,22 @@ input{padding:0 10px;width:100%;height:50px;font-size:15px;color:#333;line-heigh
 .family_site_link:after{position:absolute;left:0;bottom:-7px;width:0;height:1px;background:#000;transition: all 0.2s;content:''}
 .family_site_link:hover:after{width:100%}
 
-.section_shortcut{display:flex;font-family:'notokr'}
-.shorcut_inner{flex:1;position:relative}
-.shorcut_inner.is_open .shortcut_box_area{display:block}
-.shortcut_btn{position:relative;padding:15px 50px 16px 30px;width:100%;border-right:1px solid #494957;background:#31394a;font-size:18px;color:#ffff;text-align:left;box-sizing:border-box}
-.shortcut_btn:hover{color:#ebae1c}
-.shorcut_inner:last-child .shortcut_btn{border-right:0}
-.ico_plus{position:absolute;top:50%;transform:translateY(-50%);right:20px;width:21px;height:21px}
-/* .shortcut_btn:hover .ico_plus{transform:rotate(180deg)} */
-.ico_plus:before,.ico_plus:after{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#747474;content:''}
-.ico_plus:before{width:1px;height:20px}
-.ico_plus:after{width:20px;height:1px}
-.shortcut_box_area{display:none;overflow:auto;position:absolute;left:0;right:0;bottom:55px;padding:13px 18px;height:285px;max-height:285px;background:#1c3d8d;box-sizing:border-box}
-.shortcut_box{}
+.section_shortcut{border-top:6px solid #1c3d8d;background: #31394a;font-family:'notokr'}
+.shortcut_inner{display:flex;margin:0 auto;width:1600px}
+.shortcut_dropdown{flex:1;position:relative}
+.shortcut_dropdown.is_open .shortcut_dropdown_box{visibility:visible;height:285px}
+.shortcut_dropdown_btn{position:relative;padding:15px 50px 16px 30px;width:100%;border-left:1px solid #494957;background:#31394a;font-size:18px;color:#ffff;text-align:left;box-sizing:border-box}
+.shortcut_dropdown_btn:hover{color:#ebae1c}
+.shortcut_dropdown_btn:hover .ico_plus{transform:rotate(180deg);}
+
+
+.shortcut_dropdown:last-child .shortcut_dropdown_btn{border-right:1px solid #494957}
+.ico_plus{position:absolute;top:16px;right:20px;width:20px;height:20px;transition:.2s ease-out}
+
+.ico_plus:before,.ico_plus:after{position:absolute;background:#747474;content:''}
+.ico_plus:before{left:10px;width:1px;height:20px}
+.ico_plus:after{top:10px;width:20px;height:1px}
+.shortcut_dropdown_box{visibility:hidden;overflow:auto;position:absolute;left:0;right:0;bottom:61px;padding:13px 18px;height:0;max-height:285px;background:#1c3d8d;box-sizing:border-box;transition:.2s ease-out}
 .shortcut_tit{font-size:20px;color:#95bce1}
 .shortcut_list{margin:6px 0 15px;padding-bottom:15px;border-bottom:1px solid rgba(255,255,255,.5)}
 .shortcut_item{padding:6px 0 7px}

@@ -74,12 +74,33 @@ $(function(){
     $('.single_slide, .publish_list_slide, .local_univ_slide').slick('slickPlay');
   });
 
-  $('.shortcut_btn').on('click', function(){
-    if($('.shortcut_inner').hasClass('is_open')){
-      $('.shortcut_inner').removeClass('is_open');
-    } else {
-      $('.shorcut_inner').removeClass('is_open');
-      $(this).parent('.shorcut_inner').addClass('is_open');
-    }
-  })
+  // slide
+  var slide = function() {
+    $('.shortcut_dropdown_box').hide();
+    $('.shortcut_dropdown_btn').click(function(){
+      if($(this).parent().hasClass('is_open')){
+        $(this).parent().removeClass('is_open');
+        $(this).next().slideUp();
+      }else{
+        $('.shortcut_dropdown').removeClass('is_open');
+        $(this).parent().addClass('is_open');
+        $('.shortcut_dropdown_box').slideUp();
+        $(this).next().slideDown();
+      }
+    });
+  }
+  
+  // shortcutSlide
+  var shortcutSlide = function() {
+    $('.shortcut_dropdown_btn').click(function(){
+      if($(this).parent().hasClass('is_open')){
+        $(this).parent().removeClass('is_open');
+      }else{
+        $('.shortcut_dropdown').removeClass('is_open');
+        $(this).parent().addClass('is_open');
+      }
+    });
+  }
+  shortcutSlide();
+
 });
